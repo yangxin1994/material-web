@@ -25,7 +25,8 @@
   },
   "include": [
     "custom_typings/**/*.ts",
-    "src/*.ts"
+    "src/*.ts",
+    "theming/**/*.ts"
   ],
   "exclude": [],
   "references": [
@@ -58,6 +59,7 @@
     {"path": "packages/textarea"},
     {"path": "packages/textfield"},
     {"path": "packages/top-app-bar"},
-    {"path": "packages/top-app-bar-fixed"}
+    {"path": "packages/top-app-bar-fixed"},
+    {"path": "packages/typography"}
   ]
 }

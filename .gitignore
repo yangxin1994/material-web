@@ -10,6 +10,9 @@ node_modules
 /packages/*/*.tgz
 /packages/*/src/*-css.ts
 /packages/*/package-lock.json
+/theming/**/*.js
+/theming/**/*.js.map
+/theming/**/*.d.ts
 **/*.tsbuildinfo*
 !packages/*/custom_types/**
 /test/lib/

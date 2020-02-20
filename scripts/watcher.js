@@ -36,6 +36,13 @@ watch('packages', watchOptions, function(_event, fileName) {
   addToQueue(fileName);
 });
 
+watch('theming', {
+  recursive: true,
+  filter: path => /.ts$/.test(path)
+}, function(_event, fileName) {
+  addToQueue(fileName);
+});
+
 let updating = false;
 
 async function addToQueue(fileName) {
