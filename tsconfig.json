@@ -26,7 +26,7 @@
   "include": [
     "custom_typings/**/*.ts",
     "src/*.ts",
-    "theming/**/*.ts"
+    "theming/*.ts"
   ],
   "exclude": [],
   "references": [

@@ -1,6 +1,7 @@
 import '@material/mwc-button';
 import '@material/mwc-checkbox';
 import '@material/mwc-fab';
+import '@material/mwc-icon-button';
 import '@material/mwc-linear-progress';
 import '@material/mwc-list';
 import '@material/mwc-list/mwc-list-item';
@@ -12,6 +13,8 @@ import '@material/mwc-switch';
 import '@material/mwc-tab';
 import '@material/mwc-tab-bar';
 import '@material/mwc-textfield';
+import {TopAppBar} from '@material/mwc-top-app-bar';
+import '@material/mwc-top-app-bar';
 import {style as typographyStyle} from '@material/mwc-typography';
 import {LitElement, css, customElement, html, property, query} from 'lit-element';
 import './theme-component';
@@ -110,8 +113,13 @@ export class ThemeApp extends LitElement {
         display: flex;
       }
 
-      aside {
+      aside,
+      main {
         overflow: auto;
+      }
+
+      aside {
+        max-width: 36rem;
         padding: 0 1.5rem 1rem;
         border-right: 1px solid lightgray;
       }
@@ -135,6 +143,10 @@ export class ThemeApp extends LitElement {
   menu!: Menu;
   @query('#menu-button')
   menuButton!: HTMLElement;
+  @query('mwc-top-app-bar')
+  topAppBar!: TopAppBar;
+  @property()
+  iconButtonOff = false;
 
   render() {
     return html`
@@ -330,6 +342,13 @@ export class ThemeApp extends LitElement {
           <mwc-button outlined label="Button"></mwc-button>
         </theme-component>
         <theme-component name="Top App Bar" href="https://material.io/design/components/app-bars-top.html">
+          <mwc-top-app-bar>
+            <mwc-icon-button icon="menu" slot="navigationIcon"></mwc-icon-button>
+            <div slot="title">Headline 6</div>
+            <mwc-icon-button icon="share" slot="actionItems"></mwc-icon-button>
+            <mwc-icon-button icon="bookmark" slot="actionItems"></mwc-icon-button>
+            <mwc-icon-button icon="search" slot="actionItems"></mwc-icon-button>
+          </mwc-top-app-bar>
         </theme-component>
         <theme-component name="Drawer" href="https://material.io/design/components/navigation-drawer.html">
         </theme-component>
@@ -358,6 +377,10 @@ export class ThemeApp extends LitElement {
           <mwc-radio name="radio" checked></mwc-radio>
         </theme-component>
         <theme-component name="Icon Button" href="https://material.io/design/components/buttons.html#toggle-button">
+          <mwc-icon-button
+            icon=${this.iconButtonOff ? 'music_off' : 'music_note'}
+            @click=${this.toggleIconButton}
+          ></mwc-icon-button>
         </theme-component>
         <theme-component name="Select" href="https://material.io/develop/web/components/input-controls/select-menus/">
           <mwc-select outlined label="Pick a Food Group">
@@ -423,5 +446,12 @@ export class ThemeApp extends LitElement {
 
   firstUpdated() {
     this.menu.anchor = this.menuButton;
+    this.topAppBar.updateComplete.then(() => {
+      this.topAppBar.shadowRoot!.querySelector<HTMLElement>('.mdc-top-app-bar')!.style.position = 'relative';
+    });
+  }
+
+  protected toggleIconButton() {
+    this.iconButtonOff = !this.iconButtonOff;
   }
 }
