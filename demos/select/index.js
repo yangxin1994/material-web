@@ -847,8 +847,7 @@ var Ee="Unknown",Te="Backspace",Ae="Enter",Ie="Spacebar",Se="PageUp",Ce="PageDow
           <span class="mdc-select__selected-text">${this.selectedText}</span>
           <span class="mdc-select__dropdown-icon">
             <svg
-                width="10px"
-                height="5px"
+                class="mdc-select__dropdown-icon-graphic"
                 viewBox="7 10 10 5">
               <polygon
                   class="mdc-select__dropdown-icon-inactive"
