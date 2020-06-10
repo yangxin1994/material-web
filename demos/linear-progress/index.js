@@ -281,12 +281,13 @@ limitations under the License.
  * subject to an additional IP rights grant found at
  * http://polymer.github.io/PATENTS.txt
  */;class wt{constructor(t){this.classes=new Set,this.changed=!1,this.element=t;const e=(t.getAttribute("class")||"").split(/\s+/);for(const t of e)this.classes.add(t)}add(t){this.classes.add(t),this.changed=!0}remove(t){this.classes.delete(t),this.changed=!0}commit(){if(this.changed){let t="";this.classes.forEach(e=>t+=e+" "),this.element.setAttribute("class",t)}}}const St=new WeakMap,At=_(t=>e=>{if(!(e instanceof R)||e instanceof I||"class"!==e.committer.name||e.committer.parts.length>1)throw new Error("The `classMap` directive must be used in the `class` attribute and must be the only part in the attribute.");const{committer:r}=e,{element:i}=r;let o=St.get(e);void 0===o&&(i.setAttribute("class",r.strings.join(" ")),St.set(e,o=new Set));const n=i.classList||new wt(i);o.forEach(e=>{e in t||(n.remove(e),o.delete(e))});for(const e in t){const r=t[e];r!=o.has(e)&&(r?(n.add(e),o.add(e)):(n.remove(e),o.delete(e)))}"function"==typeof n.commit&&n.commit()}),Ct=new WeakMap,Et=_(t=>e=>{if(!(e instanceof R)||e instanceof I||"style"!==e.committer.name||e.committer.parts.length>1)throw new Error("The `styleMap` directive must be used in the style attribute and must be the only part in the attribute.");const{committer:r}=e,{style:i}=r.element;let o=Ct.get(e);void 0===o&&(i.cssText=r.strings.join(" "),Ct.set(e,o=new Set)),o.forEach(e=>{e in t||(o.delete(e),-1===e.indexOf("-")?i[e]=null:i.removeProperty(e))});for(const e in t)o.add(e),-1===e.indexOf("-")?i[e]=t[e]:i.setProperty(e,t[e])});class Tt extends yt{constructor(){super(...arguments),this.mdcFoundationClass=ft,this.indeterminate=!1,this.progress=0,this.buffer=1,this.reverse=!1,this.closed=!1,this.ariaLabel="",this.bufferFlexBasisValue="",this.primaryTransformValue=""}render(){const t={"mdc-linear-progress--closed":this.closed,"mdc-linear-progress--indeterminate":this.indeterminate,"mdc-linear-progress--reversed":this.reverse},e={"flex-basis":this.bufferFlexBasisValue},r={transform:this.primaryTransformValue};return H`
-      <div role="progressbar"
-        class="mdc-linear-progress ${At(t)}"
-        aria-label="${this.ariaLabel}"
-        aria-valuemin="0"
-        aria-valuemax="1"
-        aria-valuenow="0">
+      <div
+          role="progressbar"
+          class="mdc-linear-progress ${At(t)}"
+          aria-label="${this.ariaLabel}"
+          aria-valuemin="0"
+          aria-valuemax="1"
+          aria-valuenow="0">
         <div class="mdc-linear-progress__buffer">
           <div
             class="mdc-linear-progress__buffer-bar"
