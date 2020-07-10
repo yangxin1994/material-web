@@ -115,6 +115,22 @@ var Lt="adoptedStyleSheets"in Document.prototype&&"replace"in CSSStyleSheet.prot
    * THE SOFTWARE.
    */function qt(t){return{addClass:function(e){t.classList.add(e)},removeClass:function(e){t.classList.remove(e)},hasClass:function(e){return t.classList.contains(e)}}}var Wt=!1,Xt=function(){},$t={get passive(){return Wt=!0,!1}};document.addEventListener("x",Xt,$t),document.removeEventListener("x",Xt);var Yt=Wt;function Jt(t){var e=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(t){return!1}}();return function(){var r,n=c(t);if(e){var i=c(this).constructor;r=Reflect.construct(n,arguments,i)}else r=n.apply(this,arguments);return a(this,r)}}var Kt=function(e){n(i,e);var r=Jt(i);function i(){return t(this,i),r.apply(this,arguments)}return f(i,[{key:"createFoundation",value:function(){void 0!==this.mdcFoundation&&this.mdcFoundation.destroy(),this.mdcFoundationClass&&(this.mdcFoundation=new this.mdcFoundationClass(this.createAdapter()),this.mdcFoundation.init())}},{key:"firstUpdated",value:function(){this.createFoundation()}}]),i}(Ut);function Zt(t){var e=function(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],(function(){}))),!0}catch(t){return!1}}();return function(){var r,n=c(t);if(e){var i=c(this).constructor;r=Reflect.construct(n,arguments,i)}else r=n.apply(this,arguments);return a(this,r)}}var Qt=function(e){n(i,e);var r=Zt(i);function i(){return t(this,i),r.apply(this,arguments)}return f(i,[{key:"createRenderRoot",value:function(){return this.attachShadow({mode:"open",delegatesFocus:!0})}},{key:"click",value:function(){this.formElement&&(this.formElement.focus(),this.formElement.click())}},{key:"setAriaLabel",value:function(t){this.formElement&&this.formElement.setAttribute("aria-label",t)}},{key:"firstUpdated",value:function(){var t=this;m(c(i.prototype),"firstUpdated",this).call(this),this.mdcRoot.addEventListener("change",(function(e){t.dispatchEvent(new Event("change",e))}))}}]),i}(Kt),te=function(t){return function(e,r){if(e.constructor._observers){if(!e.constructor.hasOwnProperty("_observers")){var n=e.constructor._observers;e.constructor._observers=new Map,n.forEach((function(t,r){return e.constructor._observers.set(r,t)}))}}else{e.constructor._observers=new Map;var i=e.updated;e.updated=function(t){var e=this;i.call(this,t),t.forEach((function(t,r){var n=e.constructor._observers.get(r);void 0!==n&&n.call(e,e[r],t)}))}}e.constructor._observers.set(r,t)}};
 /**
+  @license
+  Copyright 2018 Google Inc. All Rights Reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  */
+/**
    * @license
    * Copyright 2019 Google Inc.
    *
