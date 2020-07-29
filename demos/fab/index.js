@@ -316,8 +316,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-class It{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},this.endPress=()=>{t().then(t=>{t&&t.endPress()})},this.startFocus=()=>{t().then(t=>{t&&t.startFocus()})},this.endFocus=()=>{t().then(t=>{t&&t.endFocus()})},this.startHover=()=>{t().then(t=>{t&&t.startHover()})},this.endHover=()=>{t().then(t=>{t&&t.endHover()})}}}class Ht extends lt{constructor(){super(...arguments),this.mini=!1,this.exited=!1,this.disabled=!1,this.extended=!1,this.showIconAtEnd=!1,this.icon="",this.label="",this.shouldRenderRipple=!1,this.rippleHandlers=new It(()=>(this.shouldRenderRipple=!0,this.ripple))}createRenderRoot(){return this.attachShadow({mode:"open",delegatesFocus:!0})}render(){const t={"mdc-fab--mini":this.mini,"mdc-fab--exited":this.exited,"mdc-fab--extended":this.extended,"icon-end":this.showIconAtEnd},e=""!==this.label&&this.extended;let i="";this.icon&&(i=V`
-        <span class="material-icons mdc-fab__icon">${this.icon}</span>`);let o=y;return e&&(o=V`<span class="mdc-fab__label">${this.label}</span>`),V`
+class It{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},this.endPress=()=>{t().then(t=>{t&&t.endPress()})},this.startFocus=()=>{t().then(t=>{t&&t.startFocus()})},this.endFocus=()=>{t().then(t=>{t&&t.endFocus()})},this.startHover=()=>{t().then(t=>{t&&t.startHover()})},this.endHover=()=>{t().then(t=>{t&&t.endHover()})}}}class Ht extends lt{constructor(){super(...arguments),this.mini=!1,this.exited=!1,this.disabled=!1,this.extended=!1,this.showIconAtEnd=!1,this.icon="",this.label="",this.shouldRenderRipple=!1,this.rippleHandlers=new It(()=>(this.shouldRenderRipple=!0,this.ripple))}createRenderRoot(){return this.attachShadow({mode:"open",delegatesFocus:!0})}render(){const t={"mdc-fab--mini":this.mini,"mdc-fab--exited":this.exited,"mdc-fab--extended":this.extended,"icon-end":this.showIconAtEnd};return V`
       <button
           class="mdc-fab ${Ct(t)}"
           ?disabled="${this.disabled}"
@@ -330,13 +329,15 @@ class It{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},t
           @touchstart=${this.handleRippleStartPress}
           @touchend=${this.handleRippleDeactivate}
           @touchcancel=${this.handleRippleDeactivate}>
+        ${this.renderBeforeRipple()}
         ${this.renderRipple()}
-        ${this.showIconAtEnd?o:""}
+        ${this.showIconAtEnd?this.renderLabel():""}
         <slot name="icon">
-          ${i}
+          ${this.renderIcon()}
         </slot>
-        ${this.showIconAtEnd?"":o}
-      </button>`}renderRipple(){return this.shouldRenderRipple?V`<mwc-ripple></mwc-ripple>`:y}handleRippleActivate(t){const e=()=>{window.removeEventListener("mouseup",e),this.handleRippleDeactivate()};window.addEventListener("mouseup",e),this.handleRippleStartPress(t)}handleRippleStartPress(t){this.rippleHandlers.startPress(t)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}o([it("mwc-ripple")],Ht.prototype,"ripple",void 0),o([Q({type:Boolean})],Ht.prototype,"mini",void 0),o([Q({type:Boolean})],Ht.prototype,"exited",void 0),o([Q({type:Boolean})],Ht.prototype,"disabled",void 0),o([Q({type:Boolean})],Ht.prototype,"extended",void 0),o([Q({type:Boolean})],Ht.prototype,"showIconAtEnd",void 0),o([Q()],Ht.prototype,"icon",void 0),o([Q()],Ht.prototype,"label",void 0),o([tt()],Ht.prototype,"shouldRenderRipple",void 0),o([at({passive:!0})],Ht.prototype,"handleRippleStartPress",null);
+        ${this.showIconAtEnd?"":this.renderLabel()}
+      </button>`}renderIcon(){return V`${this.icon?V`
+          <span class="material-icons mdc-fab__icon">${this.icon}</span>`:""}`}renderLabel(){const t=""!==this.label&&this.extended;return V`${t?V`<span class="mdc-fab__label">${this.label}</span>`:""}`}renderBeforeRipple(){return V``}renderRipple(){return V`${this.shouldRenderRipple?V`<mwc-ripple></mwc-ripple>`:""}`}handleRippleActivate(t){const e=()=>{window.removeEventListener("mouseup",e),this.handleRippleDeactivate()};window.addEventListener("mouseup",e),this.handleRippleStartPress(t)}handleRippleStartPress(t){this.rippleHandlers.startPress(t)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}o([it("mwc-ripple")],Ht.prototype,"ripple",void 0),o([Q({type:Boolean})],Ht.prototype,"mini",void 0),o([Q({type:Boolean})],Ht.prototype,"exited",void 0),o([Q({type:Boolean})],Ht.prototype,"disabled",void 0),o([Q({type:Boolean})],Ht.prototype,"extended",void 0),o([Q({type:Boolean})],Ht.prototype,"showIconAtEnd",void 0),o([Q()],Ht.prototype,"icon",void 0),o([Q()],Ht.prototype,"label",void 0),o([tt()],Ht.prototype,"shouldRenderRipple",void 0),o([at({passive:!0})],Ht.prototype,"handleRippleStartPress",null);
 /**
 @license
 Copyright 2018 Google Inc. All Rights Reserved.
