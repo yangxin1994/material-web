@@ -380,6 +380,7 @@ class Bt{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},t
       <button
           class="mdc-icon-button"
           @click="${this.handleClick}"
+          aria-hidden="true"
           aria-label="${this.label}"
           ?disabled="${this.disabled}"
           @focus="${this.handleRippleFocus}"
