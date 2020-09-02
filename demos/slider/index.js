@@ -596,7 +596,9 @@ class ye{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},t
         @touchcancel="${this.handleRippleDeactivate}">
       ${this.renderRipple()}
     <i class="material-icons">${this.icon}</i>
-    <slot></slot>
+    <span class="default-slot-container">
+        <slot></slot>
+    </span>
   </button>`}handleRippleMouseDown(t){const e=()=>{window.removeEventListener("mouseup",e),this.handleRippleDeactivate()};window.addEventListener("mouseup",e),this.rippleHandlers.startPress(t)}handleRippleTouchStart(t){this.rippleHandlers.startPress(t)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}r([tt({type:Boolean,reflect:!0})],xe.prototype,"disabled",void 0),r([tt({type:String})],xe.prototype,"icon",void 0),r([tt({type:String})],xe.prototype,"label",void 0),r([it("button")],xe.prototype,"buttonElement",void 0),r([rt("mwc-ripple")],xe.prototype,"ripple",void 0),r([et()],xe.prototype,"shouldRenderRipple",void 0),r([at({passive:!0})],xe.prototype,"handleRippleMouseDown",null),r([at({passive:!0})],xe.prototype,"handleRippleTouchStart",null);
 /**
 @license
@@ -668,7 +670,9 @@ const Ae=pt`:host{font-family:var(--mdc-icon-font, "Material Icons");font-weight
           </slot>
         </span>
         <span class="mdc-button__label">${this.label}</span>
-        <slot></slot>
+        <span>
+          <slot></slot>
+        </span>
         <span class="trailing-icon">
           <slot name="trailingIcon">
             ${this.icon&&this.trailingIcon?this.renderIcon():""}
