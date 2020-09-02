@@ -461,9 +461,7 @@ class jt{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},t
           </slot>
         </span>
         <span class="mdc-button__label">${this.label}</span>
-        <span>
-          <slot></slot>
-        </span>
+        <slot></slot>
         <span class="trailing-icon">
           <slot name="trailingIcon">
             ${this.icon&&this.trailingIcon?this.renderIcon():""}
@@ -619,9 +617,7 @@ limitations under the License.
         @touchcancel="${this.handleRippleDeactivate}">
       ${this.renderRipple()}
     <i class="material-icons">${this.icon}</i>
-    <span class="default-slot-container">
-        <slot></slot>
-    </span>
+    <slot></slot>
   </button>`}handleRippleMouseDown(t){const e=()=>{window.removeEventListener("mouseup",e),this.handleRippleDeactivate()};window.addEventListener("mouseup",e),this.rippleHandlers.startPress(t)}handleRippleTouchStart(t){this.rippleHandlers.startPress(t)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}i([tt({type:Boolean,reflect:!0})],ne.prototype,"disabled",void 0),i([tt({type:String})],ne.prototype,"icon",void 0),i([tt({type:String})],ne.prototype,"label",void 0),i([rt("button")],ne.prototype,"buttonElement",void 0),i([it("mwc-ripple")],ne.prototype,"ripple",void 0),i([et()],ne.prototype,"shouldRenderRipple",void 0),i([nt({passive:!0})],ne.prototype,"handleRippleMouseDown",null),i([nt({passive:!0})],ne.prototype,"handleRippleTouchStart",null);
 /**
 @license
