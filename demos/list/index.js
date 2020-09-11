@@ -939,11 +939,11 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-*/class si extends ni{constructor(){super(...arguments),this.mdcFoundationClass=ai}barClasses(){return Object.assign(Object.assign({},super.barClasses()),{"mdc-top-app-bar--fixed":!0})}registerListeners(){this.scrollTarget.addEventListener("scroll",this.handleTargetScroll,oi)}unregisterListeners(){this.scrollTarget.removeEventListener("scroll",this.handleTargetScroll)}}let ci=class extends si{};ci.styles=Jt,ci=o([Z("mwc-top-app-bar-fixed")],ci);class di extends he{constructor(){super(...arguments),this.disabled=!1,this.icon="",this.label="",this.shouldRenderRipple=!1,this.rippleHandlers=new Tt(()=>(this.shouldRenderRipple=!0,this.ripple))}renderRipple(){return B`${this.shouldRenderRipple?B`
+*/class si extends ni{constructor(){super(...arguments),this.mdcFoundationClass=ai}barClasses(){return Object.assign(Object.assign({},super.barClasses()),{"mdc-top-app-bar--fixed":!0})}registerListeners(){this.scrollTarget.addEventListener("scroll",this.handleTargetScroll,oi)}unregisterListeners(){this.scrollTarget.removeEventListener("scroll",this.handleTargetScroll)}}let ci=class extends si{};ci.styles=Jt,ci=o([Z("mwc-top-app-bar-fixed")],ci);class di extends he{constructor(){super(...arguments),this.disabled=!1,this.icon="",this.label="",this.shouldRenderRipple=!1,this.rippleHandlers=new Tt(()=>(this.shouldRenderRipple=!0,this.ripple))}renderRipple(){return this.shouldRenderRipple?B`
             <mwc-ripple
                 .disabled="${this.disabled}"
                 unbounded>
-            </mwc-ripple>`:""}`}focus(){const e=this.buttonElement;e&&(this.rippleHandlers.startFocus(),e.focus())}blur(){const e=this.buttonElement;e&&(this.rippleHandlers.endFocus(),e.blur())}render(){return B`<button
+            </mwc-ripple>`:""}focus(){const e=this.buttonElement;e&&(this.rippleHandlers.startFocus(),e.focus())}blur(){const e=this.buttonElement;e&&(this.rippleHandlers.endFocus(),e.blur())}render(){return B`<button
         class="mdc-icon-button"
         aria-label="${this.label||this.icon}"
         ?disabled="${this.disabled}"
