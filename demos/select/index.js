@@ -878,7 +878,9 @@ var di={ACTIVATED:"mdc-select--activated",DISABLED:"mdc-select--disabled",FOCUSE
           ${this.renderRipple()}
           ${this.outlined?this.renderOutline():this.renderLabel()}
           ${this.renderLeadingIcon()}
-          <span class="mdc-select__selected-text">${this.selectedText}</span>
+          <span class="mdc-select__selected-text-container">
+            <span class="mdc-select__selected-text">${this.selectedText}</span>
+          </span>
           <span class="mdc-select__dropdown-icon">
             <svg
                 class="mdc-select__dropdown-icon-graphic"
