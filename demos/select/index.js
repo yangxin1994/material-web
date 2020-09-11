@@ -1071,7 +1071,7 @@ class Si{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},t
       ${i}`}renderRipple(){return this.shouldRenderRipple?V`
       <mwc-ripple
         .activated=${this.activated}>
-      </mwc-ripple>`:this.activated?V`<div class="fake-activated-ripple"></div>`:V``}renderGraphic(){const t={multi:this.multipleGraphics};return V`
+      </mwc-ripple>`:this.activated?V`<div class="fake-activated-ripple"></div>`:""}renderGraphic(){const t={multi:this.multipleGraphics};return V`
       <span class="mdc-list-item__graphic material-icons ${Rt(t)}">
         <slot name="graphic"></slot>
       </span>`}renderMeta(){return V`

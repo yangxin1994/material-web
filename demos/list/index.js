@@ -534,7 +534,7 @@ class Tt{constructor(e){this.startPress=t=>{e().then(e=>{e&&e.startPress(t)})},t
       ${i}`}renderRipple(){return this.shouldRenderRipple?B`
       <mwc-ripple
         .activated=${this.activated}>
-      </mwc-ripple>`:this.activated?B`<div class="fake-activated-ripple"></div>`:B``}renderGraphic(){const e={multi:this.multipleGraphics};return B`
+      </mwc-ripple>`:this.activated?B`<div class="fake-activated-ripple"></div>`:""}renderGraphic(){const e={multi:this.multipleGraphics};return B`
       <span class="mdc-list-item__graphic material-icons ${wt(e)}">
         <slot name="graphic"></slot>
       </span>`}renderMeta(){return B`
