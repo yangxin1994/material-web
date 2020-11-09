@@ -482,12 +482,12 @@ const qt=new WeakMap,Wt=x(t=>e=>{const i=qt.get(e);if(void 0===t&&e instanceof R
           .floatingLabelFoundation=${Nt(this.label)}
           id="label">${this.label}</span>
     `:y}renderLeadingIcon(){return this.icon?this.renderIcon(this.icon):y}renderTrailingIcon(){return this.iconTrailing?this.renderIcon(this.iconTrailing,!0):y}renderIcon(t,e=!1){return M`<i class="material-icons mdc-text-field__icon ${At({"mdc-text-field__icon--leading":!e,"mdc-text-field__icon--trailing":e})}">${t}</i>`}renderPrefix(){return this.prefix?this.renderAffix(this.prefix):y}renderSuffix(){return this.suffix?this.renderAffix(this.suffix,!0):y}renderAffix(t,e=!1){return M`<span class="mdc-text-field__affix ${At({"mdc-text-field__affix--prefix":!e,"mdc-text-field__affix--suffix":e})}">
-        ${t}</span>`}renderInput(){const t=-1===this.minLength?void 0:this.minLength,e=-1===this.maxLength?void 0:this.maxLength,i=this.autocapitalize?this.autocapitalize:void 0,r=this.validationMessage&&!this.isUiValid;return M`
+        ${t}</span>`}renderInput(){const t=-1===this.minLength?void 0:this.minLength,e=-1===this.maxLength?void 0:this.maxLength,i=this.autocapitalize?this.autocapitalize:void 0,r=this.validationMessage&&!this.isUiValid,a=this.shouldRenderHelperText?"helper-text":void 0,o=this.focused||this.helperPersistent||r?"helper-text":void 0,n=r?"helper-text":void 0;return M`
       <input
           aria-labelledby="label"
-          aria-controls="${Wt(this.shouldRenderHelperText?"helper-text":void 0)}"
-          aria-describedby="${Wt(this.focused||this.helperPersistent||r?"helper-text":void 0)}"
-         aria-errortext="${Wt(r?"helper-text":void 0)}"
+          aria-controls="${Wt(a)}"
+          aria-describedby="${Wt(o)}"
+          aria-errortext="${Wt(n)}"
           class="mdc-text-field__input"
           type="${this.type}"
           .value="${Jt(this.value)}"
