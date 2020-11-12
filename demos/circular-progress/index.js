@@ -235,7 +235,8 @@ class me{constructor(e){this.classes=new Set,this.changed=!1,this.element=e;cons
                     stroke-dashoffset="${a}"
                     stroke-width="${o}"></circle>
           </svg>
-        </div><div class="mdc-circular-progress__gap-patch">
+        </div>
+        <div class="mdc-circular-progress__gap-patch">
           <svg class="mdc-circular-progress__indeterminate-circle-graphic"
                viewBox="0 0 ${e} ${e}">
             <circle cx="${t}" cy="${t}" r="${r}"
@@ -243,7 +244,8 @@ class me{constructor(e){this.classes=new Set,this.changed=!1,this.element=e;cons
                     stroke-dashoffset="${a}"
                     stroke-width="${.8*o}"></circle>
           </svg>
-        </div><div class="mdc-circular-progress__circle-clipper mdc-circular-progress__circle-right">
+        </div>
+        <div class="mdc-circular-progress__circle-clipper mdc-circular-progress__circle-right">
           <svg class="mdc-circular-progress__indeterminate-circle-graphic"
                viewBox="0 0 ${e} ${e}">
             <circle cx="${t}" cy="${t}" r="${r}"
