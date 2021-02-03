@@ -602,8 +602,8 @@ class ce{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},t
         @touchcancel="${this.handleRippleDeactivate}">
       ${this.renderRipple()}
     <i class="material-icons">${this.icon}</i>
-    <span class="default-slot-container">
-        <slot></slot>
+    <span>
+      <slot></slot>
     </span>
   </button>`}handleRippleMouseDown(t){const e=()=>{window.removeEventListener("mouseup",e),this.handleRippleDeactivate()};window.addEventListener("mouseup",e),this.rippleHandlers.startPress(t)}handleRippleTouchStart(t){this.rippleHandlers.startPress(t)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}t([Z({type:Boolean,reflect:!0})],pe.prototype,"disabled",void 0),t([Z({type:String})],pe.prototype,"icon",void 0),t([Z({type:String})],pe.prototype,"label",void 0),t([Q("button")],pe.prototype,"buttonElement",void 0),t([tt("mwc-ripple")],pe.prototype,"ripple",void 0),t([K()],pe.prototype,"shouldRenderRipple",void 0),t([it({passive:!0})],pe.prototype,"handleRippleMouseDown",null),t([it({passive:!0})],pe.prototype,"handleRippleTouchStart",null);
 /**
