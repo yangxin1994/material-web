@@ -688,7 +688,7 @@ var pt=function(e,t){return(pt=Object.setPrototypeOf||{__proto__:[]}instanceof A
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */class bt extends Se{constructor(){super(...arguments),this.checked=!1,this.disabled=!1,this.shouldRenderRipple=!1,this.mdcFoundationClass=ut,this.rippleHandlers=new Xe(()=>(this.shouldRenderRipple=!0,this.ripple))}changeHandler(e){this.mdcFoundation.handleChange(e),this.checked=this.formElement.checked}createAdapter(){return Object.assign(Object.assign({},_e(this.mdcRoot)),{setNativeControlChecked:e=>{this.formElement.checked=e},setNativeControlDisabled:e=>{this.formElement.disabled=e},setNativeControlAttr:(e,t)=>{this.formElement.setAttribute(e,t)}})}renderRipple(){return this.shouldRenderRipple?L`
-        <mwc-ripple 
+        <mwc-ripple
           .accent="${this.checked}"
           .disabled="${this.disabled}"
           unbounded>
