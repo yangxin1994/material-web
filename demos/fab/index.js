@@ -347,8 +347,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-class It{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},this.endPress=()=>{t().then(t=>{t&&t.endPress()})},this.startFocus=()=>{t().then(t=>{t&&t.startFocus()})},this.endFocus=()=>{t().then(t=>{t&&t.endFocus()})},this.startHover=()=>{t().then(t=>{t&&t.startHover()})},this.endHover=()=>{t().then(t=>{t&&t.endHover()})}}}class Ht extends dt{constructor(){super(...arguments),this.mini=!1,this.exited=!1,this.disabled=!1,this.extended=!1,this.showIconAtEnd=!1,this.reducedTouchTarget=!1,this.icon="",this.label="",this.shouldRenderRipple=!1,this.rippleHandlers=new It(()=>(this.shouldRenderRipple=!0,this.ripple))}createRenderRoot(){return this.attachShadow({mode:"open",delegatesFocus:!0})}render(){const t=this.mini&&!this.reducedTouchTarget,e={"mdc-fab--mini":this.mini,"mdc-fab--touch":t,"mdc-fab--exited":this.exited,"mdc-fab--extended":this.extended,"icon-end":this.showIconAtEnd},i=this.label?this.label:this.icon;return L`
-      <button
+class It{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},this.endPress=()=>{t().then(t=>{t&&t.endPress()})},this.startFocus=()=>{t().then(t=>{t&&t.startFocus()})},this.endFocus=()=>{t().then(t=>{t&&t.endFocus()})},this.startHover=()=>{t().then(t=>{t&&t.startHover()})},this.endHover=()=>{t().then(t=>{t&&t.endHover()})}}}class Ht extends dt{constructor(){super(...arguments),this.mini=!1,this.exited=!1,this.disabled=!1,this.extended=!1,this.showIconAtEnd=!1,this.reducedTouchTarget=!1,this.icon="",this.label="",this.shouldRenderRipple=!1,this.rippleHandlers=new It(()=>(this.shouldRenderRipple=!0,this.ripple))}createRenderRoot(){return this.attachShadow({mode:"open",delegatesFocus:!0})}render(){const t=this.mini&&!this.reducedTouchTarget,e={"mdc-fab--mini":this.mini,"mdc-fab--touch":t,"mdc-fab--exited":this.exited,"mdc-fab--extended":this.extended,"icon-end":this.showIconAtEnd},i=this.label?this.label:this.icon;return L`<button
           class="mdc-fab ${Ct(e)}"
           ?disabled="${this.disabled}"
           aria-label="${i}"
@@ -359,18 +358,16 @@ class It{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},t
           @mousedown=${this.handleRippleActivate}
           @touchstart=${this.handleRippleStartPress}
           @touchend=${this.handleRippleDeactivate}
-          @touchcancel=${this.handleRippleDeactivate}>
-        ${this.renderBeforeRipple()}
-        ${this.renderRipple()}
-        ${this.showIconAtEnd?this.renderLabel():""}
-        <span class="icon-slot-container">
-          <slot name="icon">
-            ${this.renderIcon()}
-          </slot>
-        </span>
-        ${this.showIconAtEnd?"":this.renderLabel()}
-        ${this.renderTouchTarget()}
-      </button>`}renderIcon(){return L`${this.icon?L`
+          @touchcancel=${this.handleRippleDeactivate}><!--
+        -->${this.renderBeforeRipple()}<!--
+        -->${this.renderRipple()}<!--
+        -->${this.showIconAtEnd?this.renderLabel():""}<!--
+        --><span class="icon-slot-container"><!--
+          --><slot name="icon">${this.renderIcon()}</slot><!--
+        --></span><!--
+        -->${this.showIconAtEnd?"":this.renderLabel()}<!--
+        -->${this.renderTouchTarget()}<!--
+      --></button>`}renderIcon(){return L`${this.icon?L`
           <span class="material-icons mdc-fab__icon">${this.icon}</span>`:""}`}renderTouchTarget(){const t=this.mini&&!this.reducedTouchTarget;return L`${t?L`<div class="mdc-fab__touch"></div>`:""}`}renderLabel(){const t=""!==this.label&&this.extended;return L`${t?L`<span class="mdc-fab__label">${this.label}</span>`:""}`}renderBeforeRipple(){return L``}renderRipple(){return this.shouldRenderRipple?L`<mwc-ripple class="ripple"></mwc-ripple>`:""}handleRippleActivate(t){const e=()=>{window.removeEventListener("mouseup",e),this.handleRippleDeactivate()};window.addEventListener("mouseup",e),this.handleRippleStartPress(t)}handleRippleStartPress(t){this.rippleHandlers.startPress(t)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}t([tt("mwc-ripple")],Ht.prototype,"ripple",void 0),t([Z({type:Boolean})],Ht.prototype,"mini",void 0),t([Z({type:Boolean})],Ht.prototype,"exited",void 0),t([Z({type:Boolean})],Ht.prototype,"disabled",void 0),t([Z({type:Boolean})],Ht.prototype,"extended",void 0),t([Z({type:Boolean})],Ht.prototype,"showIconAtEnd",void 0),t([Z({type:Boolean})],Ht.prototype,"reducedTouchTarget",void 0),t([Z()],Ht.prototype,"icon",void 0),t([Z()],Ht.prototype,"label",void 0),t([K()],Ht.prototype,"shouldRenderRipple",void 0),t([rt({passive:!0})],Ht.prototype,"handleRippleStartPress",null);
 /**
 @license
