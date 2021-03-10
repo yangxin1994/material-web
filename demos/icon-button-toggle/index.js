@@ -414,15 +414,15 @@ class Bt{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},t
           @touchcancel="${this.handleRippleDeactivate}">
         ${this.renderRipple()}
         <span class="mdc-icon-button__icon"
-          ><slot name="offIcon">
-            <i class="material-icons">${this.offIcon}</i>
-          </slot>
-        </span>
+          ><slot name="offIcon"
+            ><i class="material-icons">${this.offIcon}</i
+          ></slot
+        ></span>
         <span class="mdc-icon-button__icon mdc-icon-button__icon--on"
-          ><slot name="onIcon">
-            <i class="material-icons">${this.onIcon}</i>
-          </slot>
-        </span>
+          ><slot name="onIcon"
+            ><i class="material-icons">${this.onIcon}</i
+          ></slot
+        ></span>
       </button>`}handleRippleMouseDown(t){const e=()=>{window.removeEventListener("mouseup",e),this.handleRippleDeactivate()};window.addEventListener("mouseup",e),this.rippleHandlers.startPress(t)}handleRippleTouchStart(t){this.rippleHandlers.startPress(t)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}r([it(".mdc-icon-button")],Mt.prototype,"mdcRoot",void 0),r([tt({type:String})],Mt.prototype,"label",void 0),r([tt({type:Boolean,reflect:!0})],Mt.prototype,"disabled",void 0),r([tt({type:String})],Mt.prototype,"onIcon",void 0),r([tt({type:String})],Mt.prototype,"offIcon",void 0),r([tt({type:Boolean,reflect:!0}),(t=>(e,i)=>{if(e.constructor._observers){if(!e.constructor.hasOwnProperty("_observers")){const t=e.constructor._observers;e.constructor._observers=new Map,t.forEach((t,i)=>e.constructor._observers.set(i,t))}}else{e.constructor._observers=new Map;const t=e.updated;e.updated=function(e){t.call(this,e),e.forEach((t,e)=>{const i=this.constructor._observers.get(e);void 0!==i&&i.call(this,this[e],t)})}}e.constructor._observers.set(i,t)})((function(t){this.mdcFoundation.toggle(t)}))],Mt.prototype,"on",void 0),r([rt("mwc-ripple")],Mt.prototype,"ripple",void 0),r([et()],Mt.prototype,"shouldRenderRipple",void 0),r([nt({passive:!0})],Mt.prototype,"handleRippleMouseDown",null),r([nt({passive:!0})],Mt.prototype,"handleRippleTouchStart",null);
 /**
 @license
