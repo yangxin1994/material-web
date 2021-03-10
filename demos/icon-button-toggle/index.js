@@ -399,8 +399,7 @@ class Bt{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},t
             <mwc-ripple
                 .disabled="${this.disabled}"
                 unbounded>
-            </mwc-ripple>`:""}render(){return V`
-      <button
+            </mwc-ripple>`:""}render(){return V`<button
           class="mdc-icon-button"
           @click="${this.handleClick}"
           aria-label="${this.label}"
@@ -414,13 +413,13 @@ class Bt{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},t
           @touchend="${this.handleRippleDeactivate}"
           @touchcancel="${this.handleRippleDeactivate}">
         ${this.renderRipple()}
-        <span class="mdc-icon-button__icon">
-          <slot name="offIcon">
+        <span class="mdc-icon-button__icon"
+          ><slot name="offIcon">
             <i class="material-icons">${this.offIcon}</i>
           </slot>
         </span>
-        <span class="mdc-icon-button__icon mdc-icon-button__icon--on">
-          <slot name="onIcon">
+        <span class="mdc-icon-button__icon mdc-icon-button__icon--on"
+          ><slot name="onIcon">
             <i class="material-icons">${this.onIcon}</i>
           </slot>
         </span>
