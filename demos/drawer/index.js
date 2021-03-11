@@ -458,12 +458,12 @@ class Gt{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},t
         @mouseleave="${this.handleRippleMouseLeave}"
         @touchstart="${this.handleRippleTouchStart}"
         @touchend="${this.handleRippleDeactivate}"
-        @touchcancel="${this.handleRippleDeactivate}">
-      ${this.renderRipple()}
+        @touchcancel="${this.handleRippleDeactivate}"
+    >${this.renderRipple()}
     <i class="material-icons">${this.icon}</i>
-    <span>
-      <slot></slot>
-    </span>
+    <span
+      ><slot></slot
+    ></span>
   </button>`}handleRippleMouseDown(t){const e=()=>{window.removeEventListener("mouseup",e),this.handleRippleDeactivate()};window.addEventListener("mouseup",e),this.rippleHandlers.startPress(t)}handleRippleTouchStart(t){this.rippleHandlers.startPress(t)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}ut([J({type:Boolean,reflect:!0})],Wt.prototype,"disabled",void 0),ut([J({type:String})],Wt.prototype,"icon",void 0),ut([J({type:String})],Wt.prototype,"label",void 0),ut([K("button")],Wt.prototype,"buttonElement",void 0),ut([Q("mwc-ripple")],Wt.prototype,"ripple",void 0),ut([Z()],Wt.prototype,"shouldRenderRipple",void 0),ut([it({passive:!0})],Wt.prototype,"handleRippleMouseDown",null),ut([it({passive:!0})],Wt.prototype,"handleRippleTouchStart",null);
 /**
 @license

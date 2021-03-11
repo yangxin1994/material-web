@@ -807,12 +807,12 @@ limitations under the License.
         @mouseleave="${this.handleRippleMouseLeave}"
         @touchstart="${this.handleRippleTouchStart}"
         @touchend="${this.handleRippleDeactivate}"
-        @touchcancel="${this.handleRippleDeactivate}">
-      ${this.renderRipple()}
+        @touchcancel="${this.handleRippleDeactivate}"
+    >${this.renderRipple()}
     <i class="material-icons">${this.icon}</i>
-    <span>
-      <slot></slot>
-    </span>
+    <span
+      ><slot></slot
+    ></span>
   </button>`}handleRippleMouseDown(e){const t=()=>{window.removeEventListener("mouseup",t),this.handleRippleDeactivate()};window.addEventListener("mouseup",t),this.rippleHandlers.startPress(e)}handleRippleTouchStart(e){this.rippleHandlers.startPress(e)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}i([ee({type:Boolean,reflect:!0})],Rt.prototype,"disabled",void 0),i([ee({type:String})],Rt.prototype,"icon",void 0),i([ee({type:String})],Rt.prototype,"label",void 0),i([re("button")],Rt.prototype,"buttonElement",void 0),i([ie("mwc-ripple")],Rt.prototype,"ripple",void 0),i([te()],Rt.prototype,"shouldRenderRipple",void 0),i([ce({passive:!0})],Rt.prototype,"handleRippleMouseDown",null),i([ce({passive:!0})],Rt.prototype,"handleRippleTouchStart",null);
 /**
 @license
