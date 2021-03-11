@@ -411,8 +411,8 @@ class Bt{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},t
           @mouseleave="${this.handleRippleMouseLeave}"
           @touchstart="${this.handleRippleTouchStart}"
           @touchend="${this.handleRippleDeactivate}"
-          @touchcancel="${this.handleRippleDeactivate}">
-        ${this.renderRipple()}
+          @touchcancel="${this.handleRippleDeactivate}"
+        >${this.renderRipple()}
         <span class="mdc-icon-button__icon"
           ><slot name="offIcon"
             ><i class="material-icons">${this.offIcon}</i
