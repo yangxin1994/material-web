@@ -787,7 +787,7 @@ var pi=function(e){function o(t){var n=e.call(this,i(i({},o.defaultAdapter),t))|
           rootTabbable
           .innerRole=${this.innerRole}
           .multi=${this.multi}
-          class="mdc-list"
+          class="mdc-deprecated-list"
           .itemRoles=${e}
           .wrapFocus=${this.wrapFocus}
           .activatable=${this.activatable}
