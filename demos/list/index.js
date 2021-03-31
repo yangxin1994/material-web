@@ -950,13 +950,13 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-*/class yi extends vi{constructor(){super(...arguments),this.mdcFoundationClass=xi}barClasses(){return Object.assign(Object.assign({},super.barClasses()),{"mdc-top-app-bar--fixed":!0})}registerListeners(){this.scrollTarget.addEventListener("scroll",this.handleTargetScroll,fi)}unregisterListeners(){this.scrollTarget.removeEventListener("scroll",this.handleTargetScroll)}}let ki=class extends yi{};ki.styles=li,ki=r([Z("mwc-top-app-bar-fixed")],ki);class wi extends me{constructor(){super(...arguments),this.disabled=!1,this.icon="",this.label="",this.shouldRenderRipple=!1,this.rippleHandlers=new $e(()=>(this.shouldRenderRipple=!0,this.ripple))}renderRipple(){return this.shouldRenderRipple?B`
+*/class yi extends vi{constructor(){super(...arguments),this.mdcFoundationClass=xi}barClasses(){return Object.assign(Object.assign({},super.barClasses()),{"mdc-top-app-bar--fixed":!0})}registerListeners(){this.scrollTarget.addEventListener("scroll",this.handleTargetScroll,fi)}unregisterListeners(){this.scrollTarget.removeEventListener("scroll",this.handleTargetScroll)}}let ki=class extends yi{};ki.styles=li,ki=r([Z("mwc-top-app-bar-fixed")],ki);class wi extends me{constructor(){super(...arguments),this.disabled=!1,this.icon="",this.shouldRenderRipple=!1,this.rippleHandlers=new $e(()=>(this.shouldRenderRipple=!0,this.ripple))}renderRipple(){return this.shouldRenderRipple?B`
             <mwc-ripple
                 .disabled="${this.disabled}"
                 unbounded>
             </mwc-ripple>`:""}focus(){const e=this.buttonElement;e&&(this.rippleHandlers.startFocus(),e.focus())}blur(){const e=this.buttonElement;e&&(this.rippleHandlers.endFocus(),e.blur())}render(){return B`<button
         class="mdc-icon-button"
-        aria-label="${this.label||this.icon}"
+        aria-label="${this.ariaLabel||this.icon}"
         ?disabled="${this.disabled}"
         @focus="${this.handleRippleFocus}"
         @blur="${this.handleRippleBlur}"
@@ -971,7 +971,7 @@ limitations under the License.
     <span
       ><slot></slot
     ></span>
-  </button>`}handleRippleMouseDown(e){const t=()=>{window.removeEventListener("mouseup",t),this.handleRippleDeactivate()};window.addEventListener("mouseup",t),this.rippleHandlers.startPress(e)}handleRippleTouchStart(e){this.rippleHandlers.startPress(e)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}r([ee({type:Boolean,reflect:!0})],wi.prototype,"disabled",void 0),r([ee({type:String})],wi.prototype,"icon",void 0),r([ee({type:String})],wi.prototype,"label",void 0),r([ie("button")],wi.prototype,"buttonElement",void 0),r([re("mwc-ripple")],wi.prototype,"ripple",void 0),r([te()],wi.prototype,"shouldRenderRipple",void 0),r([ce({passive:!0})],wi.prototype,"handleRippleMouseDown",null),r([ce({passive:!0})],wi.prototype,"handleRippleTouchStart",null);
+  </button>`}handleRippleMouseDown(e){const t=()=>{window.removeEventListener("mouseup",t),this.handleRippleDeactivate()};window.addEventListener("mouseup",t),this.rippleHandlers.startPress(e)}handleRippleTouchStart(e){this.rippleHandlers.startPress(e)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}r([ee({type:Boolean,reflect:!0})],wi.prototype,"disabled",void 0),r([ee({type:String})],wi.prototype,"icon",void 0),r([Gt,ee({type:String,attribute:"aria-label"})],wi.prototype,"ariaLabel",void 0),r([ie("button")],wi.prototype,"buttonElement",void 0),r([re("mwc-ripple")],wi.prototype,"ripple",void 0),r([te()],wi.prototype,"shouldRenderRipple",void 0),r([ce({passive:!0})],wi.prototype,"handleRippleMouseDown",null),r([ce({passive:!0})],wi.prototype,"handleRippleTouchStart",null);
 /**
 @license
 Copyright 2018 Google Inc. All Rights Reserved.

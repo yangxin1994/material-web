@@ -405,13 +405,13 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-class $t{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},this.endPress=()=>{t().then(t=>{t&&t.endPress()})},this.startFocus=()=>{t().then(t=>{t&&t.startFocus()})},this.endFocus=()=>{t().then(t=>{t&&t.endFocus()})},this.startHover=()=>{t().then(t=>{t&&t.startHover()})},this.endHover=()=>{t().then(t=>{t&&t.endHover()})}}}class qt extends ut{constructor(){super(...arguments),this.disabled=!1,this.icon="",this.label="",this.shouldRenderRipple=!1,this.rippleHandlers=new $t(()=>(this.shouldRenderRipple=!0,this.ripple))}renderRipple(){return this.shouldRenderRipple?M`
+class $t{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},this.endPress=()=>{t().then(t=>{t&&t.endPress()})},this.startFocus=()=>{t().then(t=>{t&&t.startFocus()})},this.endFocus=()=>{t().then(t=>{t&&t.endFocus()})},this.startHover=()=>{t().then(t=>{t&&t.startHover()})},this.endHover=()=>{t().then(t=>{t&&t.endHover()})}}}class qt extends ut{constructor(){super(...arguments),this.disabled=!1,this.icon="",this.shouldRenderRipple=!1,this.rippleHandlers=new $t(()=>(this.shouldRenderRipple=!0,this.ripple))}renderRipple(){return this.shouldRenderRipple?M`
             <mwc-ripple
                 .disabled="${this.disabled}"
                 unbounded>
             </mwc-ripple>`:""}focus(){const t=this.buttonElement;t&&(this.rippleHandlers.startFocus(),t.focus())}blur(){const t=this.buttonElement;t&&(this.rippleHandlers.endFocus(),t.blur())}render(){return M`<button
         class="mdc-icon-button"
-        aria-label="${this.label||this.icon}"
+        aria-label="${this.ariaLabel||this.icon}"
         ?disabled="${this.disabled}"
         @focus="${this.handleRippleFocus}"
         @blur="${this.handleRippleBlur}"
@@ -426,7 +426,24 @@ class $t{constructor(t){this.startPress=e=>{t().then(t=>{t&&t.startPress(e)})},t
     <span
       ><slot></slot
     ></span>
-  </button>`}handleRippleMouseDown(t){const e=()=>{window.removeEventListener("mouseup",e),this.handleRippleDeactivate()};window.addEventListener("mouseup",e),this.rippleHandlers.startPress(t)}handleRippleTouchStart(t){this.rippleHandlers.startPress(t)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}r([tt({type:Boolean,reflect:!0})],qt.prototype,"disabled",void 0),r([tt({type:String})],qt.prototype,"icon",void 0),r([tt({type:String})],qt.prototype,"label",void 0),r([it("button")],qt.prototype,"buttonElement",void 0),r([rt("mwc-ripple")],qt.prototype,"ripple",void 0),r([et()],qt.prototype,"shouldRenderRipple",void 0),r([nt({passive:!0})],qt.prototype,"handleRippleMouseDown",null),r([nt({passive:!0})],qt.prototype,"handleRippleTouchStart",null);
+  </button>`}handleRippleMouseDown(t){const e=()=>{window.removeEventListener("mouseup",e),this.handleRippleDeactivate()};window.addEventListener("mouseup",e),this.rippleHandlers.startPress(t)}handleRippleTouchStart(t){this.rippleHandlers.startPress(t)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}r([tt({type:Boolean,reflect:!0})],qt.prototype,"disabled",void 0),r([tt({type:String})],qt.prototype,"icon",void 0),r([function(t,e,i){if(void 0!==e)
+/**
+@license
+Copyright 2021 Google Inc. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+return function(t,e,i){const r=t.constructor;if(!i){const t="__"+e;if(!(i=r.getPropertyDescriptor(e,t)))throw new Error("@ariaProperty must be used after a @property decorator")}const a=i;let o="";if(!a.set)throw new Error("@ariaProperty requires a setter for "+e);const n={configurable:!0,enumerable:!0,set(t){if(""===o){const t=r.getPropertyOptions(e);o=t.attribute}this.hasAttribute(o)&&this.removeAttribute(o),a.set.call(this,t)}};return a.get&&(n.get=function(){return a.get.call(this)}),n}(t,e,i);throw new Error("@ariaProperty only supports TypeScript Decorators")},tt({type:String,attribute:"aria-label"})],qt.prototype,"ariaLabel",void 0),r([it("button")],qt.prototype,"buttonElement",void 0),r([rt("mwc-ripple")],qt.prototype,"ripple",void 0),r([et()],qt.prototype,"shouldRenderRipple",void 0),r([nt({passive:!0})],qt.prototype,"handleRippleMouseDown",null),r([nt({passive:!0})],qt.prototype,"handleRippleTouchStart",null);
 /**
 @license
 Copyright 2018 Google Inc. All Rights Reserved.
