@@ -436,7 +436,7 @@ class Ue{constructor(e){this.startPress=t=>{e().then(e=>{e&&e.startPress(t)})},t
           id="button"
           class="mdc-button ${this.getRenderClasses()}"
           ?disabled="${this.disabled}"
-          aria-label="${this.label||this.icon}"
+          aria-label="${ve(this.ariaLabel)}"
           @focus="${this.handleRippleFocus}"
           @blur="${this.handleRippleBlur}"
           @mousedown="${this.handleRippleActivate}"
@@ -462,9 +462,9 @@ class Ue{constructor(e){this.startPress=t=>{e().then(e=>{e&&e.startPress(t)})},t
           </slot>
         </span>
       </button>`}renderIcon(){return M`
-    <mwc-icon class="mdc-button__icon">
+    <mwc-icon class="mdc-button__icon" aria-hidden="true">
       ${this.icon}
-    </mwc-icon>`}handleRippleActivate(e){const t=()=>{window.removeEventListener("mouseup",t),this.handleRippleDeactivate()};window.addEventListener("mouseup",t),this.rippleHandlers.startPress(e)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}i([ee({type:Boolean,reflect:!0})],$e.prototype,"raised",void 0),i([ee({type:Boolean,reflect:!0})],$e.prototype,"unelevated",void 0),i([ee({type:Boolean,reflect:!0})],$e.prototype,"outlined",void 0),i([ee({type:Boolean})],$e.prototype,"dense",void 0),i([ee({type:Boolean,reflect:!0})],$e.prototype,"disabled",void 0),i([ee({type:Boolean,attribute:"trailingicon"})],$e.prototype,"trailingIcon",void 0),i([ee({type:Boolean,reflect:!0})],$e.prototype,"fullwidth",void 0),i([ee({type:String})],$e.prototype,"icon",void 0),i([ee({type:String})],$e.prototype,"label",void 0),i([ee({type:Boolean})],$e.prototype,"expandContent",void 0),i([re("#button")],$e.prototype,"buttonElement",void 0),i([ie("mwc-ripple")],$e.prototype,"ripple",void 0),i([te()],$e.prototype,"shouldRenderRipple",void 0),i([ne({passive:!0})],$e.prototype,"handleRippleActivate",null);
+    </mwc-icon>`}handleRippleActivate(e){const t=()=>{window.removeEventListener("mouseup",t),this.handleRippleDeactivate()};window.addEventListener("mouseup",t),this.rippleHandlers.startPress(e)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}i([ee({type:Boolean,reflect:!0})],$e.prototype,"raised",void 0),i([ee({type:Boolean,reflect:!0})],$e.prototype,"unelevated",void 0),i([ee({type:Boolean,reflect:!0})],$e.prototype,"outlined",void 0),i([ee({type:Boolean})],$e.prototype,"dense",void 0),i([ee({type:Boolean,reflect:!0})],$e.prototype,"disabled",void 0),i([ee({type:Boolean,attribute:"trailingicon"})],$e.prototype,"trailingIcon",void 0),i([ee({type:Boolean,reflect:!0})],$e.prototype,"fullwidth",void 0),i([ee({type:String})],$e.prototype,"icon",void 0),i([ee({type:String})],$e.prototype,"label",void 0),i([ee({type:Boolean})],$e.prototype,"expandContent",void 0),i([re("#button")],$e.prototype,"buttonElement",void 0),i([ie("mwc-ripple")],$e.prototype,"ripple",void 0),i([ue,ee({attribute:"aria-label"})],$e.prototype,"ariaLabel",void 0),i([te()],$e.prototype,"shouldRenderRipple",void 0),i([ne({passive:!0})],$e.prototype,"handleRippleActivate",null);
 /**
 @license
 Copyright 2018 Google Inc. All Rights Reserved.
