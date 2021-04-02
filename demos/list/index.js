@@ -1026,7 +1026,7 @@ const Ai=pe`:host{font-family:var(--mdc-icon-font, "Material Icons");font-weight
           id="button"
           class="mdc-button ${this.getRenderClasses()}"
           ?disabled="${this.disabled}"
-          aria-label="${je(this.ariaLabel)}"
+          aria-label="${this.label||this.icon}"
           @focus="${this.handleRippleFocus}"
           @blur="${this.handleRippleBlur}"
           @mousedown="${this.handleRippleActivate}"
@@ -1052,9 +1052,9 @@ const Ai=pe`:host{font-family:var(--mdc-icon-font, "Material Icons");font-weight
           </slot>
         </span>
       </button>`}renderIcon(){return B`
-    <mwc-icon class="mdc-button__icon" aria-hidden="true">
+    <mwc-icon class="mdc-button__icon">
       ${this.icon}
-    </mwc-icon>`}handleRippleActivate(e){const t=()=>{window.removeEventListener("mouseup",t),this.handleRippleDeactivate()};window.addEventListener("mouseup",t),this.rippleHandlers.startPress(e)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}r([ee({type:Boolean,reflect:!0})],Ti.prototype,"raised",void 0),r([ee({type:Boolean,reflect:!0})],Ti.prototype,"unelevated",void 0),r([ee({type:Boolean,reflect:!0})],Ti.prototype,"outlined",void 0),r([ee({type:Boolean})],Ti.prototype,"dense",void 0),r([ee({type:Boolean,reflect:!0})],Ti.prototype,"disabled",void 0),r([ee({type:Boolean,attribute:"trailingicon"})],Ti.prototype,"trailingIcon",void 0),r([ee({type:Boolean,reflect:!0})],Ti.prototype,"fullwidth",void 0),r([ee({type:String})],Ti.prototype,"icon",void 0),r([ee({type:String})],Ti.prototype,"label",void 0),r([ee({type:Boolean})],Ti.prototype,"expandContent",void 0),r([ie("#button")],Ti.prototype,"buttonElement",void 0),r([re("mwc-ripple")],Ti.prototype,"ripple",void 0),r([Gt,ee({attribute:"aria-label"})],Ti.prototype,"ariaLabel",void 0),r([te()],Ti.prototype,"shouldRenderRipple",void 0),r([ce({passive:!0})],Ti.prototype,"handleRippleActivate",null);
+    </mwc-icon>`}handleRippleActivate(e){const t=()=>{window.removeEventListener("mouseup",t),this.handleRippleDeactivate()};window.addEventListener("mouseup",t),this.rippleHandlers.startPress(e)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}r([ee({type:Boolean,reflect:!0})],Ti.prototype,"raised",void 0),r([ee({type:Boolean,reflect:!0})],Ti.prototype,"unelevated",void 0),r([ee({type:Boolean,reflect:!0})],Ti.prototype,"outlined",void 0),r([ee({type:Boolean})],Ti.prototype,"dense",void 0),r([ee({type:Boolean,reflect:!0})],Ti.prototype,"disabled",void 0),r([ee({type:Boolean,attribute:"trailingicon"})],Ti.prototype,"trailingIcon",void 0),r([ee({type:Boolean,reflect:!0})],Ti.prototype,"fullwidth",void 0),r([ee({type:String})],Ti.prototype,"icon",void 0),r([ee({type:String})],Ti.prototype,"label",void 0),r([ee({type:Boolean})],Ti.prototype,"expandContent",void 0),r([ie("#button")],Ti.prototype,"buttonElement",void 0),r([re("mwc-ripple")],Ti.prototype,"ripple",void 0),r([te()],Ti.prototype,"shouldRenderRipple",void 0),r([ce({passive:!0})],Ti.prototype,"handleRippleActivate",null);
 /**
 @license
 Copyright 2018 Google Inc. All Rights Reserved.
