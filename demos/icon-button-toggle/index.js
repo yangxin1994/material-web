@@ -404,10 +404,10 @@ limitations under the License.
             <mwc-ripple
                 .disabled="${this.disabled}"
                 unbounded>
-            </mwc-ripple>`:""}render(){const t={"mdc-icon-button--on":this.on};return M`<button
+            </mwc-ripple>`:""}render(){const t={"mdc-icon-button--on":this.on},e=void 0!==this.ariaLabelOn&&void 0!==this.ariaLabelOff,i=e?void 0:this.on,r=e?this.on?this.ariaLabelOn:this.ariaLabelOff:this.ariaLabel;return M`<button
           class="mdc-icon-button ${Pt(t)}"
-          aria-pressed="${this.on}"
-          aria-label="${Lt(this.ariaLabel)}"
+          aria-pressed="${Lt(i)}"
+          aria-label="${Lt(r)}"
           @click="${this.handleClick}"
           ?disabled="${this.disabled}"
           @focus="${this.handleRippleFocus}"
@@ -429,7 +429,7 @@ limitations under the License.
             ><i class="material-icons">${this.onIcon}</i
           ></slot
         ></span>
-      </button>`}handleRippleMouseDown(t){const e=()=>{window.removeEventListener("mouseup",e),this.handleRippleDeactivate()};window.addEventListener("mouseup",e),this.rippleHandlers.startPress(t)}handleRippleTouchStart(t){this.rippleHandlers.startPress(t)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}r([it(".mdc-icon-button")],Vt.prototype,"mdcRoot",void 0),r([Nt,tt({type:String,attribute:"aria-label"})],Vt.prototype,"ariaLabel",void 0),r([tt({type:Boolean,reflect:!0})],Vt.prototype,"disabled",void 0),r([tt({type:String})],Vt.prototype,"onIcon",void 0),r([tt({type:String})],Vt.prototype,"offIcon",void 0),r([tt({type:Boolean,reflect:!0})],Vt.prototype,"on",void 0),r([rt("mwc-ripple")],Vt.prototype,"ripple",void 0),r([et()],Vt.prototype,"shouldRenderRipple",void 0),r([nt({passive:!0})],Vt.prototype,"handleRippleMouseDown",null),r([nt({passive:!0})],Vt.prototype,"handleRippleTouchStart",null);
+      </button>`}handleRippleMouseDown(t){const e=()=>{window.removeEventListener("mouseup",e),this.handleRippleDeactivate()};window.addEventListener("mouseup",e),this.rippleHandlers.startPress(t)}handleRippleTouchStart(t){this.rippleHandlers.startPress(t)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}r([it(".mdc-icon-button")],Vt.prototype,"mdcRoot",void 0),r([Nt,tt({type:String,attribute:"aria-label"})],Vt.prototype,"ariaLabel",void 0),r([tt({type:Boolean,reflect:!0})],Vt.prototype,"disabled",void 0),r([tt({type:String})],Vt.prototype,"onIcon",void 0),r([tt({type:String})],Vt.prototype,"offIcon",void 0),r([tt({type:String})],Vt.prototype,"ariaLabelOn",void 0),r([tt({type:String})],Vt.prototype,"ariaLabelOff",void 0),r([tt({type:Boolean,reflect:!0})],Vt.prototype,"on",void 0),r([rt("mwc-ripple")],Vt.prototype,"ripple",void 0),r([et()],Vt.prototype,"shouldRenderRipple",void 0),r([nt({passive:!0})],Vt.prototype,"handleRippleMouseDown",null),r([nt({passive:!0})],Vt.prototype,"handleRippleTouchStart",null);
 /**
 @license
 Copyright 2019 Google Inc. All Rights Reserved.
