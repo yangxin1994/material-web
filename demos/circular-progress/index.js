@@ -132,7 +132,7 @@ class{handleAttributeExpressions(e,t,r,i){const a=t[0];if("."===a){return new O(
  * Code distributed by Google as part of the polymer project is also
  * subject to an additional IP rights grant found at
  * http://polymer.github.io/PATENTS.txt
- */"undefined"!=typeof window&&(window.litHtmlVersions||(window.litHtmlVersions=[])).push("1.3.0");const V=(e,...t)=>new T(e,t,"html",B)
+ */"undefined"!=typeof window&&(window.litHtmlVersions||(window.litHtmlVersions=[])).push("1.4.0");const V=(e,...t)=>new T(e,t,"html",B)
 /**
  * @license
  * Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
