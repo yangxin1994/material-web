@@ -652,12 +652,12 @@ const He=new WeakMap,De=v(t=>e=>{const i=He.get(e);if(void 0===t&&e instanceof O
           .floatingLabelFoundation=${Se(this.label)}
           id="label">${this.label}</span>
     `:""}renderLeadingIcon(){return this.icon?this.renderIcon(this.icon):""}renderTrailingIcon(){return this.iconTrailing?this.renderIcon(this.iconTrailing,!0):""}renderIcon(t,e=!1){return U`<i class="material-icons mdc-text-field__icon ${Ft({"mdc-text-field__icon--leading":!e,"mdc-text-field__icon--trailing":e})}">${t}</i>`}renderPrefix(){return this.prefix?this.renderAffix(this.prefix):""}renderSuffix(){return this.suffix?this.renderAffix(this.suffix,!0):""}renderAffix(t,e=!1){return U`<span class="mdc-text-field__affix ${Ft({"mdc-text-field__affix--prefix":!e,"mdc-text-field__affix--suffix":e})}">
-        ${t}</span>`}renderInput(t){const e=-1===this.minLength?void 0:this.minLength,i=-1===this.maxLength?void 0:this.maxLength,o=this.autocapitalize?this.autocapitalize:void 0,r=this.validationMessage&&!this.isUiValid,a=t?"helper-text":void 0,n=this.focused||this.helperPersistent||r?"helper-text":void 0,d=r?"helper-text":void 0;return U`
+        ${t}</span>`}renderInput(t){const e=-1===this.minLength?void 0:this.minLength,i=-1===this.maxLength?void 0:this.maxLength,o=this.autocapitalize?this.autocapitalize:void 0,r=this.validationMessage&&!this.isUiValid,a=this.label?"label":void 0,n=t?"helper-text":void 0,d=this.focused||this.helperPersistent||r?"helper-text":void 0,l=r?"helper-text":void 0;return U`
       <input
-          aria-labelledby="label"
-          aria-controls="${De(a)}"
-          aria-describedby="${De(n)}"
-          aria-errortext="${De(d)}"
+          aria-labelledby=${De(a)}
+          aria-controls="${De(n)}"
+          aria-describedby="${De(d)}"
+          aria-errortext="${De(l)}"
           class="mdc-text-field__input"
           type="${this.type}"
           .value="${ze(this.value)}"
