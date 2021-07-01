@@ -625,12 +625,11 @@ const Ue=new WeakMap,$e=v(t=>e=>{const i=Ue.get(e);if(void 0===t&&e instanceof O
           .floatingLabelFoundation=${Oe(this.label)}
           id="label">${this.label}</span>
     `:""}renderLeadingIcon(){return this.icon?this.renderIcon(this.icon):""}renderTrailingIcon(){return this.iconTrailing?this.renderIcon(this.iconTrailing,!0):""}renderIcon(t,e=!1){return $`<i class="material-icons mdc-text-field__icon ${Pt({"mdc-text-field__icon--leading":!e,"mdc-text-field__icon--trailing":e})}">${t}</i>`}renderPrefix(){return this.prefix?this.renderAffix(this.prefix):""}renderSuffix(){return this.suffix?this.renderAffix(this.suffix,!0):""}renderAffix(t,e=!1){return $`<span class="mdc-text-field__affix ${Pt({"mdc-text-field__affix--prefix":!e,"mdc-text-field__affix--suffix":e})}">
-        ${t}</span>`}renderInput(t){const e=-1===this.minLength?void 0:this.minLength,i=-1===this.maxLength?void 0:this.maxLength,r=this.autocapitalize?this.autocapitalize:void 0,a=this.validationMessage&&!this.isUiValid,o=this.label?"label":void 0,n=t?"helper-text":void 0,d=this.focused||this.helperPersistent||a?"helper-text":void 0,l=a?"helper-text":void 0;return $`
+        ${t}</span>`}renderInput(t){const e=-1===this.minLength?void 0:this.minLength,i=-1===this.maxLength?void 0:this.maxLength,r=this.autocapitalize?this.autocapitalize:void 0,a=this.validationMessage&&!this.isUiValid,o=this.label?"label":void 0,n=t?"helper-text":void 0,d=this.focused||this.helperPersistent||a?"helper-text":void 0;return $`
       <input
           aria-labelledby=${$e(o)}
           aria-controls="${$e(n)}"
           aria-describedby="${$e(d)}"
-          aria-errortext="${$e(l)}"
           class="mdc-text-field__input"
           type="${this.type}"
           .value="${je(this.value)}"
