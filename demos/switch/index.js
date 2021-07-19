@@ -518,6 +518,7 @@ class ae extends ht{constructor(){super(...arguments),this.disabled=!1,this.icon
             </mwc-ripple>`:""}focus(){const t=this.buttonElement;t&&(this.rippleHandlers.startFocus(),t.focus())}blur(){const t=this.buttonElement;t&&(this.rippleHandlers.endFocus(),t.blur())}render(){return U`<button
         class="mdc-icon-button"
         aria-label="${this.ariaLabel||this.icon}"
+        aria-haspopup="${$t(this.ariaHasPopup)}"
         ?disabled="${this.disabled}"
         @focus="${this.handleRippleFocus}"
         @blur="${this.handleRippleBlur}"
@@ -532,7 +533,7 @@ class ae extends ht{constructor(){super(...arguments),this.disabled=!1,this.icon
     <span
       ><slot></slot
     ></span>
-  </button>`}handleRippleMouseDown(t){const e=()=>{window.removeEventListener("mouseup",e),this.handleRippleDeactivate()};window.addEventListener("mouseup",e),this.rippleHandlers.startPress(t)}handleRippleTouchStart(t){this.rippleHandlers.startPress(t)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}r([et({type:Boolean,reflect:!0})],ae.prototype,"disabled",void 0),r([et({type:String})],ae.prototype,"icon",void 0),r([Dt,et({type:String,attribute:"aria-label"})],ae.prototype,"ariaLabel",void 0),r([rt("button")],ae.prototype,"buttonElement",void 0),r([ot("mwc-ripple")],ae.prototype,"ripple",void 0),r([it()],ae.prototype,"shouldRenderRipple",void 0),r([st({passive:!0})],ae.prototype,"handleRippleMouseDown",null),r([st({passive:!0})],ae.prototype,"handleRippleTouchStart",null);
+  </button>`}handleRippleMouseDown(t){const e=()=>{window.removeEventListener("mouseup",e),this.handleRippleDeactivate()};window.addEventListener("mouseup",e),this.rippleHandlers.startPress(t)}handleRippleTouchStart(t){this.rippleHandlers.startPress(t)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}r([et({type:Boolean,reflect:!0})],ae.prototype,"disabled",void 0),r([et({type:String})],ae.prototype,"icon",void 0),r([Dt,et({type:String,attribute:"aria-label"})],ae.prototype,"ariaLabel",void 0),r([Dt,et({type:String,attribute:"aria-haspopup"})],ae.prototype,"ariaHasPopup",void 0),r([rt("button")],ae.prototype,"buttonElement",void 0),r([ot("mwc-ripple")],ae.prototype,"ripple",void 0),r([it()],ae.prototype,"shouldRenderRipple",void 0),r([st({passive:!0})],ae.prototype,"handleRippleMouseDown",null),r([st({passive:!0})],ae.prototype,"handleRippleTouchStart",null);
 /**
  * @license
  * Copyright 2021 Google LLC
@@ -566,6 +567,7 @@ class de extends ht{constructor(){super(...arguments),this.raised=!1,this.unelev
           class="mdc-button ${this.getRenderClasses()}"
           ?disabled="${this.disabled}"
           aria-label="${this.label||this.icon}"
+          aria-haspopup="${$t(this.ariaHasPopup)}"
           @focus="${this.handleRippleFocus}"
           @blur="${this.handleRippleBlur}"
           @mousedown="${this.handleRippleActivate}"
@@ -593,7 +595,7 @@ class de extends ht{constructor(){super(...arguments),this.raised=!1,this.unelev
       </button>`}renderIcon(){return U`
     <mwc-icon class="mdc-button__icon">
       ${this.icon}
-    </mwc-icon>`}handleRippleActivate(t){const e=()=>{window.removeEventListener("mouseup",e),this.handleRippleDeactivate()};window.addEventListener("mouseup",e),this.rippleHandlers.startPress(t)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}de.shadowRootOptions={mode:"open",delegatesFocus:!0},r([et({type:Boolean,reflect:!0})],de.prototype,"raised",void 0),r([et({type:Boolean,reflect:!0})],de.prototype,"unelevated",void 0),r([et({type:Boolean,reflect:!0})],de.prototype,"outlined",void 0),r([et({type:Boolean})],de.prototype,"dense",void 0),r([et({type:Boolean,reflect:!0})],de.prototype,"disabled",void 0),r([et({type:Boolean,attribute:"trailingicon"})],de.prototype,"trailingIcon",void 0),r([et({type:Boolean,reflect:!0})],de.prototype,"fullwidth",void 0),r([et({type:String})],de.prototype,"icon",void 0),r([et({type:String})],de.prototype,"label",void 0),r([et({type:Boolean})],de.prototype,"expandContent",void 0),r([rt("#button")],de.prototype,"buttonElement",void 0),r([ot("mwc-ripple")],de.prototype,"ripple",void 0),r([it()],de.prototype,"shouldRenderRipple",void 0),r([st({passive:!0})],de.prototype,"handleRippleActivate",null);
+    </mwc-icon>`}handleRippleActivate(t){const e=()=>{window.removeEventListener("mouseup",e),this.handleRippleDeactivate()};window.addEventListener("mouseup",e),this.rippleHandlers.startPress(t)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}de.shadowRootOptions={mode:"open",delegatesFocus:!0},r([Dt,et({type:String,attribute:"aria-haspopup"})],de.prototype,"ariaHasPopup",void 0),r([et({type:Boolean,reflect:!0})],de.prototype,"raised",void 0),r([et({type:Boolean,reflect:!0})],de.prototype,"unelevated",void 0),r([et({type:Boolean,reflect:!0})],de.prototype,"outlined",void 0),r([et({type:Boolean})],de.prototype,"dense",void 0),r([et({type:Boolean,reflect:!0})],de.prototype,"disabled",void 0),r([et({type:Boolean,attribute:"trailingicon"})],de.prototype,"trailingIcon",void 0),r([et({type:Boolean,reflect:!0})],de.prototype,"fullwidth",void 0),r([et({type:String})],de.prototype,"icon",void 0),r([et({type:String})],de.prototype,"label",void 0),r([et({type:Boolean})],de.prototype,"expandContent",void 0),r([rt("#button")],de.prototype,"buttonElement",void 0),r([ot("mwc-ripple")],de.prototype,"ripple",void 0),r([it()],de.prototype,"shouldRenderRipple",void 0),r([st({passive:!0})],de.prototype,"handleRippleActivate",null);
 /**
  * @license
  * Copyright 2021 Google LLC

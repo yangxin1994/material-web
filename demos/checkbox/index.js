@@ -503,6 +503,7 @@ class ot extends he{constructor(){super(...arguments),this.disabled=!1,this.icon
             </mwc-ripple>`:""}focus(){const e=this.buttonElement;e&&(this.rippleHandlers.startFocus(),e.focus())}blur(){const e=this.buttonElement;e&&(this.rippleHandlers.endFocus(),e.blur())}render(){return $`<button
         class="mdc-icon-button"
         aria-label="${this.ariaLabel||this.icon}"
+        aria-haspopup="${$e(this.ariaHasPopup)}"
         ?disabled="${this.disabled}"
         @focus="${this.handleRippleFocus}"
         @blur="${this.handleRippleBlur}"
@@ -517,7 +518,7 @@ class ot extends he{constructor(){super(...arguments),this.disabled=!1,this.icon
     <span
       ><slot></slot
     ></span>
-  </button>`}handleRippleMouseDown(e){const t=()=>{window.removeEventListener("mouseup",t),this.handleRippleDeactivate()};window.addEventListener("mouseup",t),this.rippleHandlers.startPress(e)}handleRippleTouchStart(e){this.rippleHandlers.startPress(e)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}i([te({type:Boolean,reflect:!0})],ot.prototype,"disabled",void 0),i([te({type:String})],ot.prototype,"icon",void 0),i([He,te({type:String,attribute:"aria-label"})],ot.prototype,"ariaLabel",void 0),i([ie("button")],ot.prototype,"buttonElement",void 0),i([oe("mwc-ripple")],ot.prototype,"ripple",void 0),i([re()],ot.prototype,"shouldRenderRipple",void 0),i([ne({passive:!0})],ot.prototype,"handleRippleMouseDown",null),i([ne({passive:!0})],ot.prototype,"handleRippleTouchStart",null);
+  </button>`}handleRippleMouseDown(e){const t=()=>{window.removeEventListener("mouseup",t),this.handleRippleDeactivate()};window.addEventListener("mouseup",t),this.rippleHandlers.startPress(e)}handleRippleTouchStart(e){this.rippleHandlers.startPress(e)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}i([te({type:Boolean,reflect:!0})],ot.prototype,"disabled",void 0),i([te({type:String})],ot.prototype,"icon",void 0),i([He,te({type:String,attribute:"aria-label"})],ot.prototype,"ariaLabel",void 0),i([He,te({type:String,attribute:"aria-haspopup"})],ot.prototype,"ariaHasPopup",void 0),i([ie("button")],ot.prototype,"buttonElement",void 0),i([oe("mwc-ripple")],ot.prototype,"ripple",void 0),i([re()],ot.prototype,"shouldRenderRipple",void 0),i([ne({passive:!0})],ot.prototype,"handleRippleMouseDown",null),i([ne({passive:!0})],ot.prototype,"handleRippleTouchStart",null);
 /**
  * @license
  * Copyright 2021 Google LLC
@@ -551,6 +552,7 @@ class dt extends he{constructor(){super(...arguments),this.raised=!1,this.unelev
           class="mdc-button ${this.getRenderClasses()}"
           ?disabled="${this.disabled}"
           aria-label="${this.label||this.icon}"
+          aria-haspopup="${$e(this.ariaHasPopup)}"
           @focus="${this.handleRippleFocus}"
           @blur="${this.handleRippleBlur}"
           @mousedown="${this.handleRippleActivate}"
@@ -578,7 +580,7 @@ class dt extends he{constructor(){super(...arguments),this.raised=!1,this.unelev
       </button>`}renderIcon(){return $`
     <mwc-icon class="mdc-button__icon">
       ${this.icon}
-    </mwc-icon>`}handleRippleActivate(e){const t=()=>{window.removeEventListener("mouseup",t),this.handleRippleDeactivate()};window.addEventListener("mouseup",t),this.rippleHandlers.startPress(e)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}dt.shadowRootOptions={mode:"open",delegatesFocus:!0},i([te({type:Boolean,reflect:!0})],dt.prototype,"raised",void 0),i([te({type:Boolean,reflect:!0})],dt.prototype,"unelevated",void 0),i([te({type:Boolean,reflect:!0})],dt.prototype,"outlined",void 0),i([te({type:Boolean})],dt.prototype,"dense",void 0),i([te({type:Boolean,reflect:!0})],dt.prototype,"disabled",void 0),i([te({type:Boolean,attribute:"trailingicon"})],dt.prototype,"trailingIcon",void 0),i([te({type:Boolean,reflect:!0})],dt.prototype,"fullwidth",void 0),i([te({type:String})],dt.prototype,"icon",void 0),i([te({type:String})],dt.prototype,"label",void 0),i([te({type:Boolean})],dt.prototype,"expandContent",void 0),i([ie("#button")],dt.prototype,"buttonElement",void 0),i([oe("mwc-ripple")],dt.prototype,"ripple",void 0),i([re()],dt.prototype,"shouldRenderRipple",void 0),i([ne({passive:!0})],dt.prototype,"handleRippleActivate",null);
+    </mwc-icon>`}handleRippleActivate(e){const t=()=>{window.removeEventListener("mouseup",t),this.handleRippleDeactivate()};window.addEventListener("mouseup",t),this.rippleHandlers.startPress(e)}handleRippleDeactivate(){this.rippleHandlers.endPress()}handleRippleMouseEnter(){this.rippleHandlers.startHover()}handleRippleMouseLeave(){this.rippleHandlers.endHover()}handleRippleFocus(){this.rippleHandlers.startFocus()}handleRippleBlur(){this.rippleHandlers.endFocus()}}dt.shadowRootOptions={mode:"open",delegatesFocus:!0},i([He,te({type:String,attribute:"aria-haspopup"})],dt.prototype,"ariaHasPopup",void 0),i([te({type:Boolean,reflect:!0})],dt.prototype,"raised",void 0),i([te({type:Boolean,reflect:!0})],dt.prototype,"unelevated",void 0),i([te({type:Boolean,reflect:!0})],dt.prototype,"outlined",void 0),i([te({type:Boolean})],dt.prototype,"dense",void 0),i([te({type:Boolean,reflect:!0})],dt.prototype,"disabled",void 0),i([te({type:Boolean,attribute:"trailingicon"})],dt.prototype,"trailingIcon",void 0),i([te({type:Boolean,reflect:!0})],dt.prototype,"fullwidth",void 0),i([te({type:String})],dt.prototype,"icon",void 0),i([te({type:String})],dt.prototype,"label",void 0),i([te({type:Boolean})],dt.prototype,"expandContent",void 0),i([ie("#button")],dt.prototype,"buttonElement",void 0),i([oe("mwc-ripple")],dt.prototype,"ripple",void 0),i([re()],dt.prototype,"shouldRenderRipple",void 0),i([ne({passive:!0})],dt.prototype,"handleRippleActivate",null);
 /**
  * @license
  * Copyright 2021 Google LLC
