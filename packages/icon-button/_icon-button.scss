@@ -4,13 +4,14 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+@use '@material/icon-button/mixins' as iconbutton-mixins;
 @use '@material/icon-button' as iconbutton;
 @use '@material/theme/custom-properties';
 @use '@material/feature-targeting' as feature;
 @use '@material/mwc-icon/_mwc-icon';
 
 @mixin core-styles() {
-  @include iconbutton.without-ripple();
+  @include iconbutton-mixins.without-ripple();
 
   :host {
     display: inline-block;
