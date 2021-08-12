@@ -2,15 +2,18 @@
 > IMPORTANT: The Material Web Components are a work in progress and subject to
 > major changes until 1.0 release.
 
-Toggle buttons can be used to group related options. To emphasize groups of related toggle buttons, a group should share a common container.
+Toggle buttons can be used to group related options. To emphasize groups of
+related toggle buttons, a group should share a common container.
 
-Icons can be used as toggle buttons when they allow selection, or deselection, of a single choice, such as marking an item as a favorite.
+Icons can be used as toggle buttons when they allow selection, or deselection,
+of a single choice, such as marking an item as a favorite.
 
-For the non-toggling version of this component, see [`<mwc-icon-button>`](https://github.com/material-components/material-components-web-components/tree/master/packages/icon-button)
+For the non-toggling version of this component, see
+[`<mwc-icon-button>`](https://github.com/material-components/material-components-web-components/tree/master/packages/icon-button)
 
 [Material Design Guidelines: Toggle Button](https://material.io/design/components/buttons.html#toggle-button)
 
-[Demo](https://material-components.github.io/material-components-web-components/demos/icon-button-toggle/)
+[Demo](https://material-components.github.io/material-web/demos/icon-button-toggle/)
 
 ## Installation
 
@@ -31,6 +34,7 @@ npm install @material/mwc-icon-button-toggle
 ### Standard
 
 #### `on = false`
+
 ![](images/standard_off.png)
 
 ```html
@@ -38,6 +42,7 @@ npm install @material/mwc-icon-button-toggle
 ```
 
 #### `on = true`
+
 ![](images/standard_on.png)
 
 ```html
@@ -47,6 +52,7 @@ npm install @material/mwc-icon-button-toggle
 ### SVG
 
 #### `on = false`
+
 ![](images/svg_off.png)
 
 ```html
@@ -57,6 +63,7 @@ npm install @material/mwc-icon-button-toggle
 ```
 
 #### `on = true`
+
 ![](images/svg_on.png)
 
 ```html
@@ -69,6 +76,7 @@ npm install @material/mwc-icon-button-toggle
 ### Image
 
 #### `on = false`
+
 ![](images/image_off.png)
 
 ```html
@@ -79,13 +87,10 @@ npm install @material/mwc-icon-button-toggle
 ```
 
 #### `on = true`
-![](images/image_on.png)
-```html
-<mwc-icon-button-toggle on>
-  <img slot="onIcon" src="https://picsum.photos/id/28/24/24">
-  <img slot="offIcon" src="https://picsum.photos/id/141/24/24?grayscale">
-</mwc-icon-button-toggle>
-```
+
+![](images/image_on.png) `html <mwc-icon-button-toggle on>
+<img slot="onIcon" src="https://picsum.photos/id/28/24/24"> <img slot="offIcon"
+src="https://picsum.photos/id/141/24/24?grayscale"> </mwc-icon-button-toggle>`
 
 ### Disabled
 
@@ -108,8 +113,11 @@ omit the `aria-label` attribute.
 ### Customize colors
 
 #### `on = false`
+
 ![](images/custom_color_off.png)
+
 #### `on = true`
+
 ![](images/custom_color_on.png)
 
 ```css
@@ -141,22 +149,32 @@ For technical details about the Material Icons font, see the
 
 ### Slots
 
-| Name      | Description
-| --------- | -----------
-| `onIcon`  | Optional `<img>` or `<svg>` to display instead of using an icon font for the `onIcon` property.
-| `offIcon` | Optional `<img>` or `<svg>` to display instead of using an icon font for the `offIcon` property.
+| Name      | Description                                                     |
+| --------- | --------------------------------------------------------------- |
+| `onIcon`  | Optional `<img>` or `<svg>` to display instead of using an icon |
+:           : font for the `onIcon` property.                                 :
+| `offIcon` | Optional `<img>` or `<svg>` to display instead of using an icon |
+:           : font for the `offIcon` property.                                :
 
 ### Properties / Attributes
 
-| Name           | Type      | Default     | Description
-| -------------- | --------- | ----------- | -----------
-| `aria-label`   | `string`  | `''`        | Accessible label for the button.
-| `on`           | `boolean` | `false`     | Whether the toggle is activated.
-| `onIcon`       | `string`  | `''`        | Icon to display when `on` is `true`.
-| `offIcon`      | `string`  | `''`        | Icon to display when `on` is `false`.
-| `disabled`     | `boolean` | `false`     | Disabled buttons cannot be interacted with and have no visual interaction effect.
-| `ariaLabelOn`  | `string`  | `undefined` | `aria-label` of the button when  `on` is true. If set,  `ariaLabelOff` must also be set.
-| `ariaLabelOff` | `string`  | `undefined` | `aria-label` of the button when `on` is false. If set, `ariaLabelOn` must also be set.
+| Name           | Type      | Default     | Description                      |
+| -------------- | --------- | ----------- | -------------------------------- |
+| `aria-label`   | `string`  | `''`        | Accessible label for the button. |
+| `on`           | `boolean` | `false`     | Whether the toggle is activated. |
+| `onIcon`       | `string`  | `''`        | Icon to display when `on` is     |
+:                :           :             : `true`.                          :
+| `offIcon`      | `string`  | `''`        | Icon to display when `on` is     |
+:                :           :             : `false`.                         :
+| `disabled`     | `boolean` | `false`     | Disabled buttons cannot be       |
+:                :           :             : interacted with and have no      :
+:                :           :             : visual interaction effect.       :
+| `ariaLabelOn`  | `string`  | `undefined` | `aria-label` of the button when  |
+:                :           :             : `on` is true. If set,            :
+:                :           :             : `ariaLabelOff` must also be set. :
+| `ariaLabelOff` | `string`  | `undefined` | `aria-label` of the button when  |
+:                :           :             : `on` is false. If set,           :
+:                :           :             : `ariaLabelOn` must also be set.  :
 
 ### Methods
 
@@ -164,26 +182,33 @@ For technical details about the Material Icons font, see the
 
 ### Events
 
-| Name                        | Detail            | Description
-| --------------------------- | ----------------- | -----------
-| `icon-button-toggle-change` | `{isOn: boolean}` | Indicates the button has been toggled. `isOn` indicates the `on` value of the toggle button.
+| Name                        | Detail            | Description              |
+| --------------------------- | ----------------- | ------------------------ |
+| `icon-button-toggle-change` | `{isOn: boolean}` | Indicates the button has |
+:                             :                   : been toggled. `isOn`     :
+:                             :                   : indicates the `on` value :
+:                             :                   : of the toggle button.    :
 
 ### CSS custom properties
 
 Inherits CSS Custom properties from:
 
-* [`mwc-ripple`](https://github.com/material-components/material-components-web-components/tree/master/packages/ripple)
+*   [`mwc-ripple`](https://github.com/material-components/material-components-web-components/tree/master/packages/ripple)
 
 #### Global custom properties
 
-This component exposes the following global [theming](https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md)
+This component exposes the following global
+[theming](https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md)
 custom properties.
 
-| Name                                 | Description
-| ------------------------------------ | -----------
-| `--mdc-icon-font`                    | Font that supports *ligatures* and determines which icons are available (see [fonts](#fonts) above).
-| `--mdc-theme-text-disabled-on-light` | Color of icon when `disabled` is `true`.
+| Name                                 | Description                          |
+| ------------------------------------ | ------------------------------------ |
+| `--mdc-icon-font`                    | Font that supports *ligatures* and   |
+:                                      : determines which icons are available :
+:                                      : (see [fonts](#fonts) above).         :
+| `--mdc-theme-text-disabled-on-light` | Color of icon when `disabled` is     |
+:                                      : `true`.                              :
 
 ## Additional references
 
-- [MDC Web: Icon Buttons](https://material.io/develop/web/components/buttons/icon-buttons/)
+-   [MDC Web: Icon Buttons](https://material.io/develop/web/components/buttons/icon-buttons/)

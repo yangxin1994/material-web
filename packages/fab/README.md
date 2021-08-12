@@ -4,14 +4,12 @@
 
 A floating action button (FAB) represents the primary action of a screen.
 
-![](images/standard.png)
-![](images/mini.png)
-![](images/extended.png)
-![](images/custom_color.png)
+![](images/standard.png) ![](images/mini.png)
+![](images/extended.png) ![](images/custom_color.png)
 
 [Material Design Guidelines: Floating Action Button](https://material.io/design/components/buttons-floating-action-button.html)
 
-[Demo](https://material-components.github.io/material-components-web-components/demos/fab/)
+[Demo](https://material-components.github.io/material-web/demos/fab/)
 
 ## Installation
 
@@ -81,6 +79,7 @@ _Note: `label` should still be set for button accessibility purposes._
 ```html
 <mwc-fab extended icon="shopping_cart" label="Add to cart"></mwc-fab>
 ```
+
 ### Customize colors
 
 ![](images/custom_color.png)
@@ -96,56 +95,88 @@ mwc-fab {
 
 ### Slots
 
-| Name     | Description
-| -------- | ---
-| `icon`   | An icon to be slotted into the fab. _Note:_ the `label` property should still be set for button accessibility.
+| Name   | Description                                                      |
+| ------ | ---------------------------------------------------------------- |
+| `icon` | An icon to be slotted into the fab. _Note:_ the `label` property |
+:        : should still be set for button accessibility.                    :
 
 ### Properties/Attributes
 
-| Name            | Type      | Description
-| --------------- | --------- |------------
-| `icon`          | `string`  | The icon to display.
-| `label`         | `string`  | The label to display when using the `extended` layout, and the `aria-label` attribute in all layouts.
-| `mini`          | `boolean` | Modifies the FAB to be a smaller size, for use on smaller screens. Defaults to `false`.
-| `reducedTouchTarget` | `boolean` | Sets the minimum touch target of the default-sized mini fab to recommended 48x48px.
-| `extended`      | `boolean` | Enable the *extended* layout which includes a text label. Defaults to `false`.
-| `showIconAtEnd` | `boolean` | When in the *extended* layout, position the icon after the label, instead of before. Defaults to `false`.
+| Name                 | Type      | Description                             |
+| -------------------- | --------- | --------------------------------------- |
+| `icon`               | `string`  | The icon to display.                    |
+| `label`              | `string`  | The label to display when using the     |
+:                      :           : `extended` layout, and the `aria-label` :
+:                      :           : attribute in all layouts.               :
+| `mini`               | `boolean` | Modifies the FAB to be a smaller size,  |
+:                      :           : for use on smaller screens. Defaults to :
+:                      :           : `false`.                                :
+| `reducedTouchTarget` | `boolean` | Sets the minimum touch target of the    |
+:                      :           : default-sized mini fab to recommended   :
+:                      :           : 48x48px.                                :
+| `extended`           | `boolean` | Enable the *extended* layout which      |
+:                      :           : includes a text label. Defaults to      :
+:                      :           : `false`.                                :
+| `showIconAtEnd`      | `boolean` | When in the *extended* layout, position |
+:                      :           : the icon after the label, instead of    :
+:                      :           : before. Defaults to `false`.            :
 
 ### Methods
+
 *None*
 
 ### Events
+
 *None*
 
 ### CSS Custom Properties
 
-Name                               | Default   | Description
----------------------------------- | --------- | -----------
-`--mdc-fab-box-shadow`             | mdc elevation 6, 8, 12 | Sets the box shadow of the fab. Elevation 6 when idle, 8 when focused or hovered, and 12 when active.
-`--mdc-fab-extended-label-padding` | `20px`    | Sets the padding on either horizontal side of an extended fab.
-`--mdc-fab-extended-icon-padding`  | `12px`    | Sets the padding between the icon and the label of an extended fab.
-`--mdc-fab-focus-outline-color`    | `initial` | The color of the focus outline ring (off by default).
-`--mdc-fab-focus-outline-width`    | `0px`     | Sets the width of the focus outline ring.
+| Name                               | Default          | Description          |
+| ---------------------------------- | ---------------- | -------------------- |
+| `--mdc-fab-box-shadow`             | mdc elevation 6, | Sets the box shadow  |
+:                                    : 8, 12            : of the fab.          :
+:                                    :                  : Elevation 6 when     :
+:                                    :                  : idle, 8 when focused :
+:                                    :                  : or hovered, and 12   :
+:                                    :                  : when active.         :
+| `--mdc-fab-extended-label-padding` | `20px`           | Sets the padding on  |
+:                                    :                  : either horizontal    :
+:                                    :                  : side of an extended  :
+:                                    :                  : fab.                 :
+| `--mdc-fab-extended-icon-padding`  | `12px`           | Sets the padding     |
+:                                    :                  : between the icon and :
+:                                    :                  : the label of an      :
+:                                    :                  : extended fab.        :
+| `--mdc-fab-focus-outline-color`    | `initial`        | The color of the     |
+:                                    :                  : focus outline ring   :
+:                                    :                  : (off by default).    :
+| `--mdc-fab-focus-outline-width`    | `0px`            | Sets the width of    |
+:                                    :                  : the focus outline    :
+:                                    :                  : ring.                :
 
 #### Elevation values
 
-| Elevation Level | CSS Value
-| ---- | ---
-| `6`  | `0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12)`
-| `8`  | `0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12)`
-| `12` | `0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12)`
+| Elevation Level | CSS Value                                                  |
+| --------------- | ---------------------------------------------------------- |
+| `6`             | `0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px     |
+:                 : rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12)` :
+| `8`             | `0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px     |
+:                 : rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12)` :
+| `12`            | `0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px    |
+:                 : rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12)` :
 
 #### Global Custom Properties
 
-This component exposes the following global [theming](https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md)
+This component exposes the following global
+[theming](https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md)
 custom properties.
 
-| Name                                 | Description
-| ------------------------------------ | -----------
-| `--mdc-icon-font`                    | Font to use for the icon.
-| `--mdc-theme-secondary`              | Background color of the FAB.
-| `--mdc-theme-on-secondary`           | Foreground color of the label and icon.
+Name                       | Description
+-------------------------- | ---------------------------------------
+`--mdc-icon-font`          | Font to use for the icon.
+`--mdc-theme-secondary`    | Background color of the FAB.
+`--mdc-theme-on-secondary` | Foreground color of the label and icon.
 
 ## Additional references
 
-- [MDC Web: Floating Action Button](https://material.io/develop/web/components/buttons/floating-action-buttons/)
+-   [MDC Web: Floating Action Button](https://material.io/develop/web/components/buttons/floating-action-buttons/)

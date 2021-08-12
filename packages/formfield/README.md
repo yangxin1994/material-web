@@ -10,11 +10,13 @@ and
 
 It is equivalent to the native
 [`<label>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)
-element in that it forwards user interaction events to the input element. For example, tapping on the label causes the associated input element to toggle and focus.
+element in that it forwards user interaction events to the input element. For
+example, tapping on the label causes the associated input element to toggle and
+focus.
 
 [Material Design Guidelines: Selection controls](https://material.io/components/selection-controls/)
 
-[Demo](https://material-components.github.io/material-components-web-components/demos/formfield/)
+[Demo](https://material-components.github.io/material-web/demos/formfield/)
 
 ## Installation
 
@@ -112,18 +114,21 @@ npm install @material/mwc-formfield
 ### Slots
 
 Name      | Description
---------- | -----------
+--------- | ------------------------------------------------------------
 *default* | The input element that this form field provides a label for.
-
 
 ### Properties/Attributes
 
-Name    | Type     | Description
-------- | -------- | ----------------------------------
-`label` | `string` | The text to display for the label and sets a11y label on input. (visually overriden by slotted label)
-`alignEnd` | `boolean` | Align the component at the end of the label.
-`spaceBetween` | `boolean` | Add space between the component and the label as the formfield grows.
-`nowrap` | `boolean` | Prevents the label from wrapping and overflow text is ellipsed.
+| Name           | Type      | Description                                     |
+| -------------- | --------- | ----------------------------------------------- |
+| `label`        | `string`  | The text to display for the label and sets a11y |
+:                :           : label on input. (visually overriden by slotted  :
+:                :           : label)                                          :
+| `alignEnd`     | `boolean` | Align the component at the end of the label.    |
+| `spaceBetween` | `boolean` | Add space between the component and the label   |
+:                :           : as the formfield grows.                         :
+| `nowrap`       | `boolean` | Prevents the label from wrapping and overflow   |
+:                :           : text is ellipsed.                               :
 
 ### Methods
 
@@ -137,12 +142,13 @@ Name    | Type     | Description
 
 #### Global CSS Custom Properties
 
-This component exposes the following global [theming](https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md)
+This component exposes the following global
+[theming](https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md)
 custom properties.
 
-| Name | Description
-|----  | -----------
-| `--mdc-typography-body2-<PROPERTY>` | Styles the typography of the formfield.
+Name                                | Description
+----------------------------------- | ---------------------------------------
+`--mdc-typography-body2-<PROPERTY>` | Styles the typography of the formfield.
 
 ## Additional references
 

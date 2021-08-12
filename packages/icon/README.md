@@ -2,12 +2,13 @@
 > IMPORTANT: The Material Web Components are a work in progress and subject to
 > major changes until 1.0 release.
 
-Icon displays an icon with a chosen name from the [Material Icons](https://material.io/resources/icons/) font, or from any
-font that supports *ligatures*.
+Icon displays an icon with a chosen name from the
+[Material Icons](https://material.io/resources/icons/) font, or from any font
+that supports *ligatures*.
 
 [Material Design Guidelines: System icons](https://material.io/design/iconography/system-icons.html)
 
-[Demo](https://material-components.github.io/material-components-web-components/demos/icon/)
+[Demo](https://material-components.github.io/material-web/demos/icon/)
 
 ## Installation
 
@@ -83,15 +84,16 @@ To see all icons that are available in the Material Icons font, see
 For technical details about the Material Icons font, see the
 [Material Icons Developer Guide](https://google.github.io/material-design-icons/).
 
-
 ## API
 
 ### Slots
 
-Name      | Description
---------- | -----------
-*default* | The name of the icon to display (e.g. `shopping_cart`). See [Material Icons](https://material.io/resources/icons/) for an index of all available icons.
-
+| Name      | Description                                   |
+| --------- | --------------------------------------------- |
+| *default* | The name of the icon to display (e.g.         |
+:           : `shopping_cart`). See [Material               :
+:           : Icons](https\://material.io/resources/icons/) :
+:           : for an index of all available icons.          :
 
 ### Properties/Attributes
 
@@ -107,7 +109,7 @@ Name      | Description
 
 ### CSS Custom Properties
 
-Name              | Default          | Description
------------------ | ---------------- | -----------
+Name              | Default                                                  | Description
+----------------- | -------------------------------------------------------- | -----------
 `--mdc-icon-font` | [`Material Icons`](https://material.io/resources/icons/) | Font that supports *ligatures* and determines which icons are available (see [fonts](#fonts) above).
-`--mdc-icon-size` | `24px`           | Size of the icon.
+`--mdc-icon-size` | `24px`                                                   | Size of the icon.

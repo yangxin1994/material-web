@@ -2,11 +2,12 @@
 > IMPORTANT: The Material Web Components are a work in progress and subject to
 > major changes until 1.0 release.
 
-The Navigation Drawer is used to organize access to destinations and other functionality on an app.
+The Navigation Drawer is used to organize access to destinations and other
+functionality on an app.
 
 [Material Design Guidelines: Navigation Drawer](https://material.io/components/navigation-drawer/)
 
-[Demo](https://material-components.github.io/material-components-web-components/demos/drawer/)
+[Demo](https://material-components.github.io/material-web/demos/drawer/)
 
 ## Installation
 
@@ -25,6 +26,7 @@ npm install @material/mwc-drawer
 ## Example usage
 
 ### Standard
+
 <img src="images/standard_no_header.png" width="552px">
 
 ```html
@@ -59,6 +61,7 @@ mwc-drawer[open] top-app-bar {
 ```
 
 ### Standard with Header
+
 <img src="images/standard.png" width="552px">
 
 ```html
@@ -80,6 +83,7 @@ mwc-drawer[open] top-app-bar {
 ```
 
 ### Dismissible
+
 <img src="images/dismissible.gif" width="552px">
 
 ```html
@@ -113,6 +117,7 @@ mwc-drawer[open] top-app-bar {
 ```
 
 ### Modal
+
 <img src="images/modal.gif" width="552px">
 
 ```html
@@ -148,50 +153,68 @@ mwc-drawer[open] top-app-bar {
 ## API
 
 ### Slots
-Name | Description
----- | -----------
-`title` | Header title to display in the drawer when `hasHeader` is true.
-`subtitle` | Header subtitle to display in the drawer when `hasHeader` is true.
-`header` | Additional header elements to display in the drawer.
-`appContent` | Elements to display in the "app content" to the right of, or under, the drawer.
-*default* | Elements to display under the header in drawer.
 
+| Name         | Description                                                  |
+| ------------ | ------------------------------------------------------------ |
+| `title`      | Header title to display in the drawer when `hasHeader` is    |
+:              : true.                                                        :
+| `subtitle`   | Header subtitle to display in the drawer when `hasHeader` is |
+:              : true.                                                        :
+| `header`     | Additional header elements to display in the drawer.         |
+| `appContent` | Elements to display in the "app content" to the right of, or |
+:              : under, the drawer.                                           :
+| *default*    | Elements to display under the header in drawer.              |
 
 ### Properties/Attributes
 
-Name | Type | Default | Description
----- | ---- | ------- | -----------
-`open` | `boolean` | `false` | Whether the dialog is open
-`hasHeader` | `boolean` | `false` | When `true`, displays the `title`, `subtitle`, and `header` slots.
-`type` | `string` | `''` | When set to `'dismissible'`, overlays the drawer on the content. When set to `'modal'`, also adds a scrim when the drawer is open. When set to empty string, it is inlined with the page and displaces app content.
+| Name        | Type      | Default | Description                             |
+| ----------- | --------- | ------- | --------------------------------------- |
+| `open`      | `boolean` | `false` | Whether the dialog is open              |
+| `hasHeader` | `boolean` | `false` | When `true`, displays the `title`,      |
+:             :           :         : `subtitle`, and `header` slots.         :
+| `type`      | `string`  | `''`    | When set to `'dismissible'`, overlays   |
+:             :           :         : the drawer on the content. When set to  :
+:             :           :         : `'modal'`, also adds a scrim when the   :
+:             :           :         : drawer is open. When set to empty       :
+:             :           :         : string, it is inlined with the page and :
+:             :           :         : displaces app content.                  :
 
 ### Methods
+
 *None*
 
 ### Events
 
-Name | Detail | Description
----- | ------ | -----------
-`MDCDrawer:opened` | `{}` | Fired when the drawer opens.
-`MDCDrawer:closed` | `{}` | Fired when the drawer closes.
+Name               | Detail | Description
+------------------ | ------ | -----------------------------
+`MDCDrawer:opened` | `{}`   | Fired when the drawer opens.
+`MDCDrawer:closed` | `{}`   | Fired when the drawer closes.
 
 ### CSS Custom Properties
 
-| Name                 | Default   | Description
-| -------------------- | --------- | -----------
-| `--mdc-drawer-width` | `256px`   | Width of the side drawer when opened.
+Name                 | Default | Description
+-------------------- | ------- | -------------------------------------
+`--mdc-drawer-width` | `256px` | Width of the side drawer when opened.
 
 ### Global CSS Custom Properties
 
-This component exposes the following global [theming](https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md)
+This component exposes the following global
+[theming](https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md)
 custom properties.
 
-| Name | Detail | Description
-|---- | ------ | -----------
-| `--mdc-theme-surface`                    | The background color of the drawer.
-| `--mdc-typography-headline6-<PROPERTY>`  | Styles the typography of the drawer's title.
-| `--mdc-typography-body2-<PROPERTY>`      | Styles the typography of the drawer's subtitle.
-| `--mdc-typography-subtitle2-<PROPERTY>`  | Styles the typography of the drawer's list items.
+| Name                                    | Detail               | Description |
+| --------------------------------------- | -------------------- | ----------- |
+| `--mdc-theme-surface`                   | The background color |             |
+:                                         : of the drawer.       :             :
+| `--mdc-typography-headline6-<PROPERTY>` | Styles the           |             |
+:                                         : typography of the    :             :
+:                                         : drawer's title.      :             :
+| `--mdc-typography-body2-<PROPERTY>`     | Styles the           |             |
+:                                         : typography of the    :             :
+:                                         : drawer's subtitle.   :             :
+| `--mdc-typography-subtitle2-<PROPERTY>` | Styles the           |             |
+:                                         : typography of the    :             :
+:                                         : drawer's list items. :             :
 
 ### Additional References
 

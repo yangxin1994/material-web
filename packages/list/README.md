@@ -1,5 +1,4 @@
 # `<mwc-list>` [![Published on npm](https://img.shields.io/npm/v/@material/mwc-list.svg)](https://www.npmjs.com/package/@material/mwc-list)
-
 > IMPORTANT: The Material Web Components are a work in progress and subject to
 > major changes until 1.0 release.
 
@@ -9,7 +8,7 @@ Lists are continuous, vertical indexes of text or images.
 
 [Material Design Guidelines: lists](https://material.io/design/components/lists.html)
 
-[Demo](https://material-components.github.io/material-components-web-components/demos/list/)
+[Demo](https://material-components.github.io/material-web/demos/list/)
 
 ## Installation
 
@@ -313,8 +312,10 @@ the item, and it will no longer be considered for selection.
 
 For more-control on styling, you may want to disable the ripple. Internally
 `list-item` uses `mwc-ripple`. You can make the ripple invisible using its
-custom properties detailed in [`mwc-ripple`'s documentation](https://github.com/material-components/material-components-web-components/tree/master/packages/list). In this case,
-it may be simple to just set `--mdc-ripple-color` to `transparent`.
+custom properties detailed in
+[`mwc-ripple`'s documentation](https://github.com/material-components/material-components-web-components/tree/master/packages/list).
+In this case, it may be simple to just set `--mdc-ripple-color` to
+`transparent`.
 
 <img src="images/styled_no_ripple.png" width="402px">
 
@@ -367,37 +368,113 @@ it may be simple to just set `--mdc-ripple-color` to `transparent`.
 
 #### mwc-list
 
-| Name              |	Description
-| ----------------- | -------------
-| _default_         |	Content to display in the lists internal `<ul>` element.
+Name      | Description
+--------- | --------------------------------------------------------
+_default_ | Content to display in the lists internal `<ul>` element.
 
 #### mwc-list-item
 
-| Name        | Description
-| ----------- | ---
-| `graphic`   | First tile graphic to display when `graphic` attribute is defined.
-| `meta`      | Last tile meta icon or text to display when `hasMeta` is true.
-| `secondary` | Secondary text displayed below primary text of a two-line list item.
-| _default_   |	Primary text to display in the list item. Note, text must be wrapped in an inline node to be styled for `disabled` variant.
-
+| Name        | Description                                                    |
+| ----------- | -------------------------------------------------------------- |
+| `graphic`   | First tile graphic to display when `graphic` attribute is      |
+:             : defined.                                                       :
+| `meta`      | Last tile meta icon or text to display when `hasMeta` is true. |
+| `secondary` | Secondary text displayed below primary text of a two-line list |
+:             : item.                                                          :
+| _default_   | Primary text to display in the list item. Note, text must be   |
+:             : wrapped in an inline node to be styled for `disabled` variant. :
 
 ### Properties/Attributes
 
 #### mwc-list
 
-| Name             | Type           | Default | Description
-| ---------------- | -------------- | ------- |------------
-| `activatable`    | `boolean`      | `false` | Sets `activated` attribute on selected items which provides a focus-persistent highlight.
-| `rootTabbable`   | `boolean`      | `false` | When `true`, sets `tabindex="0"` on the internal list. Otherwise sets `tabindex="-1"`.
-| `multi`          | `boolean`      | `false` | When `true`, enables selection of multiple items. This will result in `index` being of type `Set<number>` and selected returning `ListItemBase[]`.
-| `wrapFocus`      | `boolean`      | `false` | When `true`, pressing `up` on the keyboard when focused on the first item will focus the last item and `down` when focused on the last item will focus the first item.
-| `itemRoles`      | `string\|null` | `null`  | Determines what `role` attribute to set on all list items.
-| `innerAriaLabel` | `string\|null` | `null`  | ARIA label of the internal `<ul>` element.
-| `innerRole`      | `string\|null` | `null`  | Role of the internal `<ul>` element.
-| `noninteractive` | `boolean`      | `false` | When `true`, disables focus and pointer events (thus ripples) on the list. Used for display-only lists.
-| `items`          | `ListItemBase[]` (readonly)* | `[]` | All list items that are available for selection. Eligible items have the `[mwc-list-item]` attribute which `ListItemBase` applies automatically.
-| `selected`       | `SelectedType` (readonly)* | `null` | Currently-selected list item(s). When `multi` is `true`, `selected` is of type `ListItemBase[]` and when `false`, `selected` is of type `ListItemBase`. `selected` is `null` when no item is selected.
-| `index`          | `MWCListIndex` (readonly)**  | `-1` | Index / indices of selected item(s). When `multi` is `true`, `index` is of type `number` and when `false`, `index` is of type `Set<number>`. Unset indicies are `-1` and empty `Set<number>` for single and multi selection respectively.
+| Name             | Type                       | Default | Description        |
+| ---------------- | -------------------------- | ------- | ------------------ |
+| `activatable`    | `boolean`                  | `false` | Sets `activated`   |
+:                  :                            :         : attribute on       :
+:                  :                            :         : selected items     :
+:                  :                            :         : which provides a   :
+:                  :                            :         : focus-persistent   :
+:                  :                            :         : highlight.         :
+| `rootTabbable`   | `boolean`                  | `false` | When `true`, sets  |
+:                  :                            :         : `tabindex="0"` on  :
+:                  :                            :         : the internal list. :
+:                  :                            :         : Otherwise sets     :
+:                  :                            :         : `tabindex="-1"`.   :
+| `multi`          | `boolean`                  | `false` | When `true`,       |
+:                  :                            :         : enables selection  :
+:                  :                            :         : of multiple items. :
+:                  :                            :         : This will result   :
+:                  :                            :         : in `index` being   :
+:                  :                            :         : of type            :
+:                  :                            :         : `Set<number>` and  :
+:                  :                            :         : selected returning :
+:                  :                            :         : `ListItemBase[]`.  :
+| `wrapFocus`      | `boolean`                  | `false` | When `true`,       |
+:                  :                            :         : pressing `up` on   :
+:                  :                            :         : the keyboard when  :
+:                  :                            :         : focused on the     :
+:                  :                            :         : first item will    :
+:                  :                            :         : focus the last     :
+:                  :                            :         : item and `down`    :
+:                  :                            :         : when focused on    :
+:                  :                            :         : the last item will :
+:                  :                            :         : focus the first    :
+:                  :                            :         : item.              :
+| `itemRoles`      | `string\|null`             | `null`  | Determines what    |
+:                  :                            :         : `role` attribute   :
+:                  :                            :         : to set on all list :
+:                  :                            :         : items.             :
+| `innerAriaLabel` | `string\|null`             | `null`  | ARIA label of the  |
+:                  :                            :         : internal `<ul>`    :
+:                  :                            :         : element.           :
+| `innerRole`      | `string\|null`             | `null`  | Role of the        |
+:                  :                            :         : internal `<ul>`    :
+:                  :                            :         : element.           :
+| `noninteractive` | `boolean`                  | `false` | When `true`,       |
+:                  :                            :         : disables focus and :
+:                  :                            :         : pointer events     :
+:                  :                            :         : (thus ripples) on  :
+:                  :                            :         : the list. Used for :
+:                  :                            :         : display-only       :
+:                  :                            :         : lists.             :
+| `items`          | `ListItemBase[]`           | `[]`    | All list items     |
+:                  : (readonly)*                :         : that are available :
+:                  :                            :         : for selection.     :
+:                  :                            :         : Eligible items     :
+:                  :                            :         : have the           :
+:                  :                            :         : `[mwc-list-item]`  :
+:                  :                            :         : attribute which    :
+:                  :                            :         : `ListItemBase`     :
+:                  :                            :         : applies            :
+:                  :                            :         : automatically.     :
+| `selected`       | `SelectedType` (readonly)* | `null`  | Currently-selected |
+:                  :                            :         : list item(s). When :
+:                  :                            :         : `multi` is `true`, :
+:                  :                            :         : `selected` is of   :
+:                  :                            :         : type               :
+:                  :                            :         : `ListItemBase[]`   :
+:                  :                            :         : and when `false`,  :
+:                  :                            :         : `selected` is of   :
+:                  :                            :         : type               :
+:                  :                            :         : `ListItemBase`.    :
+:                  :                            :         : `selected` is      :
+:                  :                            :         : `null` when no     :
+:                  :                            :         : item is selected.  :
+| `index`          | `MWCListIndex`             | `-1`    | Index / indices of |
+:                  : (readonly)**               :         : selected item(s).  :
+:                  :                            :         : When `multi` is    :
+:                  :                            :         : `true`, `index` is :
+:                  :                            :         : of type `number`   :
+:                  :                            :         : and when `false`,  :
+:                  :                            :         : `index` is of type :
+:                  :                            :         : `Set<number>`.     :
+:                  :                            :         : Unset indicies are :
+:                  :                            :         : `-1` and empty     :
+:                  :                            :         : `Set<number>` for  :
+:                  :                            :         : single and multi   :
+:                  :                            :         : selection          :
+:                  :                            :         : respectively.      :
 
 \* `SelectedType` is equivaalent to type `ListItemBase|ListItemBase[]|null`.
 `ListItemBase` is the base class of `mwc-list-item` of which both
@@ -407,20 +484,40 @@ it may be simple to just set `--mdc-ripple-color` to `transparent`.
 
 #### mwc-list-item
 
-| Name               | Type                | Default | Description
-| ------------------ | ------------------- | ------- | -----------
-| `value`            | `string`            | `''`    | Value associated with this list item (used by `mwc-select`).
-| `group`            | `string\|null`      | `null`  | Used to group items together (used by `mwc-menu` for menu selection groups and `mwc-radio-list-element`).
-| `tabindex`         | `number`            | `-1`    | Reflects `tabindex` and sets internal tab indices.
-| `disabled`         | `boolean`           | `false` | Reflects `disabled` and sets internal `disabled` attributes.
-| `twoline`          | `boolean`           | `false` | Activates the two-line variant and enables the `secondary` slot.
-| `activated`        | `boolean`           | `false` | Activates focus-persistent ripple.
-| `graphic`          | `GraphicType`*      | `null`  | Determines which graphic layout to show and enables the `graphic` slot.
-| `multipleGraphics` | `boolean`           | `false` | Allows arbitrary width for multiple slotted graphics.
-| `hasMeta`          | `boolean`           | `false` | Activates the meta layout tile and enables the `meta` slot.
-| `noninteractive`   | `boolean`           | `false` | Disables focus and pointer events for the list item.
-| `selected`         | `boolean`           | `false` | Denotes that the list item is selected.
-| `text`             | `string` (readonly) | `''`    | Trimmed `textContent` of the list item.
+| Name               | Type           | Default | Description                |
+| ------------------ | -------------- | ------- | -------------------------- |
+| `value`            | `string`       | `''`    | Value associated with this |
+:                    :                :         : list item (used by         :
+:                    :                :         : `mwc-select`).             :
+| `group`            | `string\|null` | `null`  | Used to group items        |
+:                    :                :         : together (used by          :
+:                    :                :         : `mwc-menu` for menu        :
+:                    :                :         : selection groups and       :
+:                    :                :         : `mwc-radio-list-element`). :
+| `tabindex`         | `number`       | `-1`    | Reflects `tabindex` and    |
+:                    :                :         : sets internal tab indices. :
+| `disabled`         | `boolean`      | `false` | Reflects `disabled` and    |
+:                    :                :         : sets internal `disabled`   :
+:                    :                :         : attributes.                :
+| `twoline`          | `boolean`      | `false` | Activates the two-line     |
+:                    :                :         : variant and enables the    :
+:                    :                :         : `secondary` slot.          :
+| `activated`        | `boolean`      | `false` | Activates focus-persistent |
+:                    :                :         : ripple.                    :
+| `graphic`          | `GraphicType`* | `null`  | Determines which graphic   |
+:                    :                :         : layout to show and enables :
+:                    :                :         : the `graphic` slot.        :
+| `multipleGraphics` | `boolean`      | `false` | Allows arbitrary width for |
+:                    :                :         : multiple slotted graphics. :
+| `hasMeta`          | `boolean`      | `false` | Activates the meta layout  |
+:                    :                :         : tile and enables the       :
+:                    :                :         : `meta` slot.               :
+| `noninteractive`   | `boolean`      | `false` | Disables focus and pointer |
+:                    :                :         : events for the list item.  :
+| `selected`         | `boolean`      | `false` | Denotes that the list item |
+:                    :                :         : is selected.               :
+| `text`             | `string`       | `''`    | Trimmed `textContent` of   |
+:                    : (readonly)     :         : the list item.             :
 
 \* `GraphicType` is equivalent to the type
 `'avatar'|'icon'|'medium'|'large'|'control'|null`.
@@ -431,10 +528,14 @@ Note: `mwc-check-list-item` inherits from `ListItemBase` which is the base class
 of `mwc-list-item`, so all properties in `mwc-list-item` will be available on
 `mwc-check-list-item`.
 
-| Name             | Type           | Default     | Description
-| ---------------- | -------------- | ----------- | -----------
-| `left`           | `boolean`      | `false`     | Displays the checkbox on the left. Overrides `graphic`.
-| `graphic`        | `GraphicType`* | `'control'` | Determines which graphic layout to show and enables the `graphic` slot when value is not `control` or `null`.
+| Name      | Type           | Default     | Description                       |
+| --------- | -------------- | ----------- | --------------------------------- |
+| `left`    | `boolean`      | `false`     | Displays the checkbox on the      |
+:           :                :             : left. Overrides `graphic`.        :
+| `graphic` | `GraphicType`* | `'control'` | Determines which graphic layout   |
+:           :                :             : to show and enables the `graphic` :
+:           :                :             : slot when value is not `control`  :
+:           :                :             : or `null`.                        :
 
 \* `GraphicType` is equivalent to the type
 `'avatar'|'icon'|'medium'|'large'|'control'|null`.
@@ -445,33 +546,67 @@ Note: `mwc-radio-list-item` inherits from `ListItemBase` which is the base class
 of `mwc-list-item`, so all properties in `mwc-list-item` will be available on
 `mwc-radio-list-item`.
 
-| Name             | Type           | Default     | Description
-| ---------------- | -------------- | ----------- | -----------
-| `left`           | `boolean`      | `false`     | Displays the checkbox on the left. Overrides `graphic`.
-| `graphic`        | `GraphicType`* | `'control'` | Determines which graphic layout to show and enables the `graphic` slot when value is not `control` or `null`.
-| `group`          | `string\|null`  | `null`      | Used to group the internal `mwc-radio`s together (also used by `mwc-menu` for selection groups).
+| Name      | Type           | Default     | Description                       |
+| --------- | -------------- | ----------- | --------------------------------- |
+| `left`    | `boolean`      | `false`     | Displays the checkbox on the      |
+:           :                :             : left. Overrides `graphic`.        :
+| `graphic` | `GraphicType`* | `'control'` | Determines which graphic layout   |
+:           :                :             : to show and enables the `graphic` :
+:           :                :             : slot when value is not `control`  :
+:           :                :             : or `null`.                        :
+| `group`   | `string\|null` | `null`      | Used to group the internal        |
+:           :                :             : `mwc-radio`s together (also used  :
+:           :                :             : by `mwc-menu` for selection       :
+:           :                :             : groups).                          :
 
 \* `GraphicType` is equivalent to the type
 `'avatar'|'icon'|'medium'|'large'|'control'|null`.
 
 ### Methods
 
-| Name     | Description
-| -------- | -------------
-| `select(index: MWCListIndex) => void` | Selects the elements at the given index / indices.
-| `toggle(index: number, force?: boolean) => void` | Toggles the selected index, and forcibly selects or deselects the value of `force` if attribute is provided.
-| `getFocusedItemIndex() => number` | Returns the index of the currently-focused item. `-1` if none are focused.
-| `focusItemAtIndex(index) => void` | Focuses the item at the given index and manages tabindex on all other items.
-| `layout(updateItems = true) => void` | Resets tabindex on all items and will update items model if provided true. It may be required to call layout if selectability of an element is dynamically changed. e.g. `[mwc-list-item]` attribute is removed from a list item or `noninteractive` is dynamically set on a list item.
+| Name                                 | Description                           |
+| ------------------------------------ | ------------------------------------- |
+| `select(index: MWCListIndex) =>      | Selects the elements at the given     |
+: void`                                : index / indices.                      :
+| `toggle(index: number, force?:       | Toggles the selected index, and       |
+: boolean) => void`                    : forcibly selects or deselects the     :
+:                                      : value of `force` if attribute is      :
+:                                      : provided.                             :
+| `getFocusedItemIndex() => number`    | Returns the index of the              |
+:                                      : currently-focused item. `-1` if none  :
+:                                      : are focused.                          :
+| `focusItemAtIndex(index) => void`    | Focuses the item at the given index   |
+:                                      : and manages tabindex on all other     :
+:                                      : items.                                :
+| `layout(updateItems = true) => void` | Resets tabindex on all items and will |
+:                                      : update items model if provided true.  :
+:                                      : It may be required to call layout if  :
+:                                      : selectability of an element is        :
+:                                      : dynamically changed. e.g.             :
+:                                      : `[mwc-list-item]` attribute is        :
+:                                      : removed from a list item or           :
+:                                      : `noninteractive` is dynamically set   :
+:                                      : on a list item.                       :
 
 ### Events
 
 #### mwc-list
 
-| Event Name | Target       | Detail             | Description
-| ---------- | ------------ | ------------------ | -----------
-| `action`   | `mwc-list`   | `ActionDetail`*    | Fired when a selection has been made via click or keyboard aciton.
-| `selected` | `mwc-list`   | `SelectedDetail`** | Fired when a selection has been made. `index` is the selected index (will be of type `Set<number>` if multi and `number` if single), and `diff` (of type `IndexDiff`**) represents the diff of added and removed indices from previous selection.
+| Event Name | Target     | Detail             | Description                   |
+| ---------- | ---------- | ------------------ | ----------------------------- |
+| `action`   | `mwc-list` | `ActionDetail`*    | Fired when a selection has    |
+:            :            :                    : been made via click or        :
+:            :            :                    : keyboard aciton.              :
+| `selected` | `mwc-list` | `SelectedDetail`** | Fired when a selection has    |
+:            :            :                    : been made. `index` is the     :
+:            :            :                    : selected index (will be of    :
+:            :            :                    : type `Set<number>` if multi   :
+:            :            :                    : and `number` if single), and  :
+:            :            :                    : `diff` (of type               :
+:            :            :                    : `IndexDiff`**) represents the :
+:            :            :                    : diff of added and removed     :
+:            :            :                    : indices from previous         :
+:            :            :                    : selection.                    :
 
 \* `ActionDetail` is an interface of the following type:
 
@@ -528,9 +663,9 @@ mwcList.addEventListener('selected', onSelected);
 
 #### mwc-list-item
 
-| Event Name          | Target          | Detail                   | Description
-| ------------------- | --------------- | ------------------------ | -----------
-| `request-selected`  | `mwc-list-item` | `RequestSelectedDetail`* | Fired upon click and when `selected` property is changed. Requests selection from the `mwc-list`.
+Event Name         | Target          | Detail                   | Description
+------------------ | --------------- | ------------------------ | -----------
+`request-selected` | `mwc-list-item` | `RequestSelectedDetail`* | Fired upon click and when `selected` property is changed. Requests selection from the `mwc-list`.
 
 \* `RequestSelectedDetail` is an interface of the following type:
 
@@ -543,57 +678,105 @@ interface RequestSelectedDetail {
 
 #### mwc-check-list-item
 
-| Event Name          | Target          | Detail                  | Description
-| ------------------- | --------------- | ----------------------- | -----------
-| `request-selected`  | `mwc-list-item` | `RequestSelectedDetail` | Fired upon click. Requests selection from the `mwc-list`.
+| Event Name         | Target          | Detail                  | Description |
+| ------------------ | --------------- | ----------------------- | ----------- |
+| `request-selected` | `mwc-list-item` | `RequestSelectedDetail` | Fired upon  |
+:                    :                 :                         : click.      :
+:                    :                 :                         : Requests    :
+:                    :                 :                         : selection   :
+:                    :                 :                         : from the    :
+:                    :                 :                         : `mwc-list`. :
 
 #### mwc-radio-list-item
 
-| Event Name          | Target          | Detail                   | Description
-| ------------------- | --------------- | ------------------------ | -----------
-| `request-selected`  | `mwc-list-item` | `RequestSelectedDetail` | Fired upon click and on internal `mwc-radio`'s `checked` event. Requests selection from the `mwc-list`.
+Event Name         | Target          | Detail                  | Description
+------------------ | --------------- | ----------------------- | -----------
+`request-selected` | `mwc-list-item` | `RequestSelectedDetail` | Fired upon click and on internal `mwc-radio`'s `checked` event. Requests selection from the `mwc-list`.
 
 ### CSS Custom Properties
 
 #### mwc-list
 
-| Name                                | Default               | Description
-| ----------------------------------- | --------------------- |------------
-| `--mdc-list-vertical-padding` | `8px`    | Padding before and after the first and last list items.
-| `--mdc-list-side-padding`     | `16px`   | Adjusts the padding of the `[padded]` list dividers (also propagates to `mwc-list-item`).
-| `--mdc-list-inset-margin`     | `72px`   | Adjusts the left inset padding of an `[inset]` list divider. Typically used for dividing list items with icons.
+| Name                          | Default | Description                        |
+| ----------------------------- | ------- | ---------------------------------- |
+| `--mdc-list-vertical-padding` | `8px`   | Padding before and after the first |
+:                               :         : and last list items.               :
+| `--mdc-list-side-padding`     | `16px`  | Adjusts the padding of the         |
+:                               :         : `[padded]` list dividers (also     :
+:                               :         : propagates to `mwc-list-item`).    :
+| `--mdc-list-inset-margin`     | `72px`  | Adjusts the left inset padding of  |
+:                               :         : an `[inset]` list divider.         :
+:                               :         : Typically used for dividing list   :
+:                               :         : items with icons.                  :
 
 #### mwc-list-item
 
-| Name                                       | Default              | Description
-| ------------------------------------------ | -------------------- |------------
-| `--mdc-list-side-padding`                  | `16px`               | Side padding of the list item.
-| `--mdc-list-item-meta-size`                | `24px`               | Line height of the meta icon or text and width & height of the slotted parent wrapper.
-| `--mdc-list-item-graphic-size`             | `24px`,`40px`,`56px` | Line height of the graphic and width & height of the slotted parent wrapper. `24px` when graphic is `"icon"`. `40px` when graphic is `"avatar"`. `56px` when graphic is `"medium"`, and `"large"`.
-| `--mdc-list-item-graphic-margin`           | `16px`,`32px`        | Margin between the text and graphic. `16px` when graphic is `"avatar"`, `"medium"`, `"large"`, and `"control"`. `32px` when graphic is `"icon"`.
+| Name                             | Default              | Description        |
+| -------------------------------- | -------------------- | ------------------ |
+| `--mdc-list-side-padding`        | `16px`               | Side padding of    |
+:                                  :                      : the list item.     :
+| `--mdc-list-item-meta-size`      | `24px`               | Line height of the |
+:                                  :                      : meta icon or text  :
+:                                  :                      : and width & height :
+:                                  :                      : of the slotted     :
+:                                  :                      : parent wrapper.    :
+| `--mdc-list-item-graphic-size`   | `24px`,`40px`,`56px` | Line height of the |
+:                                  :                      : graphic and width  :
+:                                  :                      : & height of the    :
+:                                  :                      : slotted parent     :
+:                                  :                      : wrapper. `24px`    :
+:                                  :                      : when graphic is    :
+:                                  :                      : `"icon"`. `40px`   :
+:                                  :                      : when graphic is    :
+:                                  :                      : `"avatar"`. `56px` :
+:                                  :                      : when graphic is    :
+:                                  :                      : `"medium"`, and    :
+:                                  :                      : `"large"`.         :
+| `--mdc-list-item-graphic-margin` | `16px`,`32px`        | Margin between the |
+:                                  :                      : text and graphic.  :
+:                                  :                      : `16px` when        :
+:                                  :                      : graphic is         :
+:                                  :                      : `"avatar"`,        :
+:                                  :                      : `"medium"`,        :
+:                                  :                      : `"large"`, and     :
+:                                  :                      : `"control"`.       :
+:                                  :                      : `32px` when        :
+:                                  :                      : graphic is         :
+:                                  :                      : `"icon"`.          :
 
-`mwc-list-item` internally uses [`mwc-ripple`](https://github.com/material-components/material-components-web-components/tree/master/packages/list)
+`mwc-list-item` internally uses
+[`mwc-ripple`](https://github.com/material-components/material-components-web-components/tree/master/packages/list)
 and thus exposes all of the custom properties in `mwc-ripple`'s documentation
 with the exception of `--mdc-ripple-color` being overriden as
 `--mdc-theme-primary` when `mwc-list-item` is `activated`.
 
 ##### Global Custom Properties
 
-This component exposes the following global [theming](https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md)
+This component exposes the following global
+[theming](https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md)
 custom properties.
 
-| Name                                       | Description
-| ------------------------------------------ | -----------
-| `--mdc-theme-primary`                      | Color of the activated ripple and primary text color when activated.
-| `--mdc-theme-on-surface`                   | Disabled text color.
-| `--mdc-theme-text-icon-on-background`      | Color of the graphic icon (if graphic is text icon).
-| `--mdc-theme-text-primary-on-background`   | Color of the primary text if not activated.
-| `--mdc-theme-text-secondary-on-background` | Color of the secondary text if not activated.
-| `--mdc-theme-hint-on-background`           | Color of the meta (if is text or text icon).
-| `--mdc-typography-subtitle1-<PROPERTY>`    | Styles the typography of a list item.
-| `--mdc-typography-body2-<PROPERTY>`        | Styles the typography of a list item's secondary text.
-| `--mdc-typography-caption-<PROPERTY>`      | Styles the typography of a list item's icon and meta text.
+| Name                                       | Description                     |
+| ------------------------------------------ | ------------------------------- |
+| `--mdc-theme-primary`                      | Color of the activated ripple   |
+:                                            : and primary text color when     :
+:                                            : activated.                      :
+| `--mdc-theme-on-surface`                   | Disabled text color.            |
+| `--mdc-theme-text-icon-on-background`      | Color of the graphic icon (if   |
+:                                            : graphic is text icon).          :
+| `--mdc-theme-text-primary-on-background`   | Color of the primary text if    |
+:                                            : not activated.                  :
+| `--mdc-theme-text-secondary-on-background` | Color of the secondary text if  |
+:                                            : not activated.                  :
+| `--mdc-theme-hint-on-background`           | Color of the meta (if is text   |
+:                                            : or text icon).                  :
+| `--mdc-typography-subtitle1-<PROPERTY>`    | Styles the typography of a list |
+:                                            : item.                           :
+| `--mdc-typography-body2-<PROPERTY>`        | Styles the typography of a list |
+:                                            : item's secondary text.          :
+| `--mdc-typography-caption-<PROPERTY>`      | Styles the typography of a list |
+:                                            : item's icon and meta text.      :
 
 ## Additional references
 
-- [MDC Web lists](https://material.io/develop/web/components/lists/)
+-   [MDC Web lists](https://material.io/develop/web/components/lists/)

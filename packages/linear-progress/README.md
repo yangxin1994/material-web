@@ -2,13 +2,14 @@
 > IMPORTANT: The Material Web Components are a work in progress and subject to
 > major changes until 1.0 release.
 
-Progress indicators express an unspecified wait time or display the length of a process.
+Progress indicators express an unspecified wait time or display the length of a
+process.
 
 <img src="images/showcase.gif" height="45px">
 
 [Material Design Guidelines: Progress Indicators](https://material.io/components/progress-indicators/#circular-progress-indicators)
 
-[Demo](https://material-components.github.io/material-components-web-components/demos/linear-progress/)
+[Demo](https://material-components.github.io/material-web/demos/linear-progress/)
 
 ## Example usage
 
@@ -43,7 +44,6 @@ Progress indicators express an unspecified wait time or display the length of a 
 
 <img src="images/reversed.gif" height="45px">
 
-
 ```html
 <mwc-linear-progress
     reverse
@@ -77,20 +77,31 @@ None
 
 ### Properties/Attributes
 
-| Name            | Type      | Default | Description
-| --------------- | --------- | ------- |------------
-| `indeterminate` | `boolean` | `false` | Sets the linear-progress into its indeterminate state.
-| `progress`      | `number`  | `0`     | Sets the primary progress bar's value. Value should be between [0, 1].
-| `buffer`        | `number`  | `1`     | Sets the buffer progress bar's value. Value should be between [0, 1]. Setting this value to be less than 1 will reveal moving, buffering dots.
-| `reverse`       | `boolean` | `false` | Reverses the direction of the linear progress indicator.
-| `closed`        | `boolean` | `false` | Sets the progress indicator to the closed state. Sets content opactiy to 0. Typically should be set to true when loading has finished.
+| Name            | Type      | Default | Description                          |
+| --------------- | --------- | ------- | ------------------------------------ |
+| `indeterminate` | `boolean` | `false` | Sets the linear-progress into its    |
+:                 :           :         : indeterminate state.                 :
+| `progress`      | `number`  | `0`     | Sets the primary progress bar's      |
+:                 :           :         : value. Value should be between [0,   :
+:                 :           :         : 1].                                  :
+| `buffer`        | `number`  | `1`     | Sets the buffer progress bar's       |
+:                 :           :         : value. Value should be between [0,   :
+:                 :           :         : 1]. Setting this value to be less    :
+:                 :           :         : than 1 will reveal moving, buffering :
+:                 :           :         : dots.                                :
+| `reverse`       | `boolean` | `false` | Reverses the direction of the linear |
+:                 :           :         : progress indicator.                  :
+| `closed`        | `boolean` | `false` | Sets the progress indicator to the   |
+:                 :           :         : closed state. Sets content opactiy   :
+:                 :           :         : to 0. Typically should be set to     :
+:                 :           :         : true when loading has finished.      :
 
 ### Methods
 
-| Name              | Description
-| ----------------- | -----------
-| `open() => void`  | Sets `LinearProgress.closed` to `false`;
-| `close() => void` | Sets `LinearProgress.closed` to `true`;
+Name              | Description
+----------------- | ----------------------------------------
+`open() => void`  | Sets `LinearProgress.closed` to `false`;
+`close() => void` | Sets `LinearProgress.closed` to `true`;
 
 ### Events
 
@@ -98,10 +109,10 @@ None
 
 ### CSS Custom Properties
 
-| Name                                         | Default                                | Description
-| -------------------------------------------- | -------------------------------------- |------------
-| `--mdc-linear-progress-buffer-color`         | ![](images/color_e6e6e6.png) `#E6E6E6` | Sets the color of the buffer progress bar.<br> **NOTE:** to change the color of the buffering dots, you must do so in the image of `--mdc-linear-progress-buffering-dots-image`.
-| `--mdc-linear-progress-buffering-dots-image` | `url("<svg data url>")` (see below for value) | Sets the image to use as the buffering dots. This pattern is then repeated horizontally and animated.
+Name                                         | Default                                                | Description
+-------------------------------------------- | ------------------------------------------------------ | -----------
+`--mdc-linear-progress-buffer-color`         | ![](images/color_e6e6e6.png) `#E6E6E6` | Sets the color of the buffer progress bar.<br> **NOTE:** to change the color of the buffering dots, you must do so in the image of `--mdc-linear-progress-buffering-dots-image`.
+`--mdc-linear-progress-buffering-dots-image` | `url("<svg data url>")` (see below for value)          | Sets the image to use as the buffering dots. This pattern is then repeated horizontally and animated.
 
 Default value for `--mdc-linear-progress-buffering-dots-image`:
 
@@ -117,13 +128,14 @@ the url-encoded equivalent of `#`).
 
 #### Global Custom Properties
 
-This component exposes the following global [theming](https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md)
+This component exposes the following global
+[theming](https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md)
 custom properties.
 
-| Name                                 | Description
-| ------------------------------------ | -----------
-| `--mdc-theme-primary`                | Sets the color of primary progress bar.
+Name                  | Description
+--------------------- | ---------------------------------------
+`--mdc-theme-primary` | Sets the color of primary progress bar.
 
 ## Additional references
 
-- [MDC Web linear-progresss](https://material-components.github.io/material-components-web-catalog/#/component/linear-progress-indicator)
+-   [MDC Web linear-progresss](https://material-components.github.io/material-components-web-catalog/#/component/linear-progress-indicator)

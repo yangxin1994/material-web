@@ -4,11 +4,12 @@
 
 Icon buttons allow users to take actions, and make choices, with a single tap.
 
-For the toggling version of this component, see [`<mwc-icon-button-toggle>`](https://github.com/material-components/material-components-web-components/tree/master/packages/icon-button-toggle/)
+For the toggling version of this component, see
+[`<mwc-icon-button-toggle>`](https://github.com/material-components/material-components-web-components/tree/master/packages/icon-button-toggle/)
 
 [Material Design Guidelines: Button](https://material.io/design/components/buttons.html)
 
-[Demo](https://material-components.github.io/material-components-web-components/demos/icon-button/)
+[Demo](https://material-components.github.io/material-web/demos/icon-button/)
 
 ## Installation
 
@@ -85,45 +86,63 @@ For technical details about the Material Icons font, see the
 ## API
 
 ### Slots
-| Name | Description
-| ---- | -----------
-| _default_ | Optional `<img>` or `<svg>` to display instead of using an icon font
+
+Name      | Description
+--------- | --------------------------------------------------------------------
+_default_ | Optional `<img>` or `<svg>` to display instead of using an icon font
 
 ### Properties/Attributes
-| Name | Type | Default | Description
-| ---- | ---- | ------- | -----------
-| `aria-haspopup` | `string` | `undefined` | Indicates the availability and type of an interactive popup element, such as menu or dialog, that can be triggered by the button.
-| `icon` | `string` | `''` | Icon to display, and `aria-label` value when `label` is not defined.
-| `label` | `string` | `''` | Accessible label for the button, sets `aria-label`.
-| `disabled` | `boolean` | `false` | Disabled buttons cannot be interacted with and have no visual interaction effect.
+
+| Name            | Type      | Default     | Description                      |
+| --------------- | --------- | ----------- | -------------------------------- |
+| `aria-haspopup` | `string`  | `undefined` | Indicates the availability and   |
+:                 :           :             : type of an interactive popup     :
+:                 :           :             : element, such as menu or dialog, :
+:                 :           :             : that can be triggered by the     :
+:                 :           :             : button.                          :
+| `icon`          | `string`  | `''`        | Icon to display, and             |
+:                 :           :             : `aria-label` value when `label`  :
+:                 :           :             : is not defined.                  :
+| `label`         | `string`  | `''`        | Accessible label for the button, |
+:                 :           :             : sets `aria-label`.               :
+| `disabled`      | `boolean` | `false`     | Disabled buttons cannot be       |
+:                 :           :             : interacted with and have no      :
+:                 :           :             : visual interaction effect.       :
 
 ### Methods
+
 *None*
 
 ### Events
+
 *None*
 
 ### CSS Custom Properties
 
 Inherits CSS Custom properties from:
 
-* [`mwc-ripple`](https://github.com/material-components/material-components-web-components/tree/master/packages/ripple)
+*   [`mwc-ripple`](https://github.com/material-components/material-components-web-components/tree/master/packages/ripple)
 
-| Name | Default | Description
-| ---- | ------- | -----------
-| `--mdc-icon-button-size` | `48px` | Sets the size of the button wrapping the icon.
+| Name                     | Default | Description                          |
+| ------------------------ | ------- | ------------------------------------ |
+| `--mdc-icon-button-size` | `48px`  | Sets the size of the button wrapping |
+:                          :         : the icon.                            :
 
 #### Global Custom Properties
 
-This component exposes the following global [theming](https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md)
+This component exposes the following global
+[theming](https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md)
 custom properties.
 
-| Name                                 | Description
-| ------------------------------------ | -----------
-| `--mdc-icon-font`                    | Font that supports *ligatures* and determines which icons are available (see [fonts](#fonts) above).
-| `--mdc-icon-size`                    | Sets the size of the icon.
-| `--mdc-theme-text-disabled-on-light` | Color of icon when `disabled` is `true`.
+| Name                                 | Description                          |
+| ------------------------------------ | ------------------------------------ |
+| `--mdc-icon-font`                    | Font that supports *ligatures* and   |
+:                                      : determines which icons are available :
+:                                      : (see [fonts](#fonts) above).         :
+| `--mdc-icon-size`                    | Sets the size of the icon.           |
+| `--mdc-theme-text-disabled-on-light` | Color of icon when `disabled` is     |
+:                                      : `true`.                              :
 
 ## Additional references
 
-- [MDC Web: Icon Buttons](https://material.io/develop/web/components/buttons/icon-buttons/)
+-   [MDC Web: Icon Buttons](https://material.io/develop/web/components/buttons/icon-buttons/)

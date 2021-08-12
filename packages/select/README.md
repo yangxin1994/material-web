@@ -8,7 +8,7 @@ Selects display a list of choices on temporary surfaces.
 
 [Material Design Guidelines: exposed dropdown menus](https://material.io/components/menus/#exposed-dropdown-menu)
 
-[Demo](https://material-components.github.io/material-components-web-components/demos/select/)
+[Demo](https://material-components.github.io/material-web/demos/select/)
 
 ## Installation
 
@@ -248,7 +248,7 @@ Name                                          | Description
 `setCustomValidity(message:string) => void`   | Sets a custom validity message (also overwrites `validationMessage`). If this message is not the empty string, then the element is suffering from a custom validity error and does not validate.
 `select(index: number) => void`               | Selects the element at the given index.
 `layout(updateItems = true) => Promise<void>` | Resets tabindex on all items and will update `items` model if provided true. It may be required to call layout if selectability of an element is dynamically changed. e.g. `[mwc-list-item]` attribute is removed from a list item or `noninteractive` is dynamically set on a list item. Also re-calculates layout. If a select is styled with `display:none` before it is first rendered, and it has a label that is floating, then you must call `layout()` the first time you remove `display:none`, or else the notch surrounding the label will not render correctly.
-`layoutOptions() => Promise<void>` | Synchronizes the list of options with the model of the component and updates the selected text. Call this if the selected item is dynamically updated in value or text.
+`layoutOptions() => Promise<void>`            | Synchronizes the list of options with the model of the component and updates the selected text. Call this if the selected item is dynamically updated in value or text.
 
 ### Events
 
@@ -256,7 +256,12 @@ Name                                          | Description
 | ---------- | -------------------- | ----------------- | -------------------- |
 | `opened`   | `mwc-select-surface` | none              | Fired menu opens.    |
 | `closed`   | `mwc-select-surface` | none              | Fired menu closes.   |
-| `selected` | `mwc-list`           | `SelectedDetail`* | Fired when a selection has been made. Property `index` is the selected index (will  be of type `number`) |
+| `selected` | `mwc-list`           | `SelectedDetail`* | Fired when a         |
+:            :                      :                   : selection has been   :
+:            :                      :                   : made. Property       :
+:            :                      :                   : `index` is the       :
+:            :                      :                   : selected index (will :
+:            :                      :                   : be of type `number`) :
 
 \* See
 [`mwc-list`'s Events section](https://github.com/material-components/material-components-web-components/tree/master/packages/list#mwc-list-2)
@@ -294,15 +299,22 @@ for further details.
 
 #### Global Custom Properties
 
-This component exposes the following global [theming](https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md)
+This component exposes the following global
+[theming](https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md)
 custom properties.
 
-| Name                     | Description
-| ------------------------ | -----------
-| `--mdc-theme-primary`    | Color when active of the underline ripple, the outline, the caret, the dropdown-icon, and the focused and activatd list items.
-| `--mdc-theme-error`      | Color when errored of the underline ripple, the outline, the caret, the dropdown-icon, and the focused and activatd list items.
-| `--mdc-typography-subtitle1-<PROPERTY>` | Styles the typography of the selected text.
-
+| Name                                    | Description                        |
+| --------------------------------------- | ---------------------------------- |
+| `--mdc-theme-primary`                   | Color when active of the underline |
+:                                         : ripple, the outline, the caret,    :
+:                                         : the dropdown-icon, and the focused :
+:                                         : and activatd list items.           :
+| `--mdc-theme-error`                     | Color when errored of the          |
+:                                         : underline ripple, the outline, the :
+:                                         : caret, the dropdown-icon, and the  :
+:                                         : focused and activatd list items.   :
+| `--mdc-typography-subtitle1-<PROPERTY>` | Styles the typography of the       |
+:                                         : selected text.                     :
 
 ## Additional references
 

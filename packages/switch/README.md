@@ -7,7 +7,7 @@ way to adjust settings on mobile.
 
 [Material Design Guidelines: Switch](https://material.io/components/selection-controls/#switches)
 
-[Demo](https://material-components.github.io/material-components-web-components/demos/switch/)
+[Demo](https://material-components.github.io/material-web/demos/switch/)
 
 ## Installation
 
@@ -96,12 +96,16 @@ to associate an interactive label with the switch.
 *None*
 
 ### Properties/Attributes
-| Name       | Type      | Default | Description
-| ---------- | --------- | ------- | -----------
-| `selected` | `boolean` | `false` | If true, the switch is on. If false, the switch is off.
-| `disabled` | `boolean` | `false` | Indicates whether or not the switch is disabled.
-| `name` | `string` | `""` | The form name of the switch.
-| `value` | `string` | `"on"` | The value of the switch to submit in a form when selected.
+
+| Name       | Type      | Default | Description                              |
+| ---------- | --------- | ------- | ---------------------------------------- |
+| `selected` | `boolean` | `false` | If true, the switch is on. If false, the |
+:            :           :         : switch is off.                           :
+| `disabled` | `boolean` | `false` | Indicates whether or not the switch is   |
+:            :           :         : disabled.                                :
+| `name`     | `string`  | `""`    | The form name of the switch.             |
+| `value`    | `string`  | `"on"`  | The value of the switch to submit in a   |
+:            :           :         : form when selected.                      :
 
 ### Methods
 
@@ -114,8 +118,8 @@ to associate an interactive label with the switch.
 ### CSS Custom Properties
 
 The switch may be customized using the `theme()` mixin to emit custom
-properties. The `theme()` mixin can be used for simple and complex theming,
-such as density.
+properties. The `theme()` mixin can be used for simple and complex theming, such
+as density.
 
 ```scss
 @use '@material/mwc-switch';
@@ -143,19 +147,21 @@ mwc-switch.dense {
 }
 ```
 
-View the [MDC switch theme file](https://github.com/material-components/material-components-web/blob/master/packages/mdc-switch/_switch-theme.scss)
+View the
+[MDC switch theme file](https://github.com/material-components/material-components-web/blob/master/packages/mdc-switch/_switch-theme.scss)
 for a list of theme keys and available built-in themes.
 
 #### Global Custom Properties
 
-This component exposes the following global [theming](https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md)
+This component exposes the following global
+[theming](https://github.com/material-components/material-components-web-components/blob/master/docs/theming.md)
 custom properties.
 
-| Name                                 | Description
-| ------------------------------------ | -----------
-| `--mdc-theme-primary`                | Selected handle and ripple color.
-| `--mdc-theme-on-primary`             | Selected and unselected icon colors.
+Name                     | Description
+------------------------ | ------------------------------------
+`--mdc-theme-primary`    | Selected handle and ripple color.
+`--mdc-theme-on-primary` | Selected and unselected icon colors.
 
 ## Additional references
 
-- [MDC Web: Switch](https://github.com/material-components/material-components-web/tree/master/packages/mdc-switch)
+-   [MDC Web: Switch](https://github.com/material-components/material-components-web/tree/master/packages/mdc-switch)

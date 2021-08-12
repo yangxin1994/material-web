@@ -2,11 +2,12 @@
 > IMPORTANT: The Material Web Components are a work in progress and subject to
 > major changes until 1.0 release.
 
-Tabs organize content across different screens, data sets, and other interactions.
+Tabs organize content across different screens, data sets, and other
+interactions.
 
 [Material Design Guidelines: tabs](https://material.io/components/tabs/)
 
-[Demo](https://material-components.github.io/material-components-web-components/demos/tabs/)
+[Demo](https://material-components.github.io/material-web/demos/tabs/)
 
 ## Installation
 
@@ -249,34 +250,37 @@ _Note: example is in the state of hovering over the first tab._
 
 ### Slots
 
-| Name              |	Description
-| ----------------- | -------------
-| _default_         |	[`mwc-tab`](https://github.com/material-components/material-components-web-components/tree/master/packages/tab) elements to display.
+Name      | Description
+--------- | -----------
+_default_ | [`mwc-tab`](https://github.com/material-components/material-components-web-components/tree/master/packages/tab) elements to display.
 
 ### Properties/Attributes
 
-| Name          | Type     | Default | Description
-| ------------- | -------- | ------- | -----------
-| `activeIndex` | `number` | `0`     | Index of tab that is active.
+Name          | Type     | Default | Description
+------------- | -------- | ------- | ----------------------------
+`activeIndex` | `number` | `0`     | Index of tab that is active.
 
 ### Methods
 
-| Name     | Description
-| -------- | -------------
-| `scrollIndexIntoView(index:number) => void` | For long, scrollable `tab-bar`s, scrolls the tab at the given index into view.
+| Name                               | Description                             |
+| ---------------------------------- | --------------------------------------- |
+| `scrollIndexIntoView(index:number) | For long, scrollable `tab-bar`s,        |
+: => void`                           : scrolls the tab at the given index into :
+:                                    : view.                                   :
 
 ### Events
 
-| Event Name            | Target             | Detail            | Description
-| --------------------- | ------------------ | ----------------- | -----------
-| `MDCTabBar:activated` | `mwc-tab-bar`      | `{index: number}` | Emitted when a tab selection has been made.
+| Event Name            | Target        | Detail   | Description              |
+| --------------------- | ------------- | -------- | ------------------------ |
+| `MDCTabBar:activated` | `mwc-tab-bar` | `{index: | Emitted when a tab       |
+:                       :               : number}` : selection has been made. :
 
 ### CSS Custom Properties
 
 Inherits CSS Custom properties from:
 
-* [`mwc-tab`](https://github.com/material-components/material-components-web-components/tree/master/packages/tab)
+*   [`mwc-tab`](https://github.com/material-components/material-components-web-components/tree/master/packages/tab)
 
 ## Additional references
 
-- [MDC Web tabs](https://material.io/components/tabs/)
+-   [MDC Web tabs](https://material.io/components/tabs/)
